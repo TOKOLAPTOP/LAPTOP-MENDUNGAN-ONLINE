@@ -24,3 +24,7 @@ Buka `index.html` di browser untuk pratinjau lokal, atau unggah isi folder ini k
 
 - `index.html` — storefront, katalog, pengelolaan sisi-browser, dan informasi COD.
 - `assets/` — foto produk, contoh listing UMKM, dan logo.
+
+## Kontak dan titik awal kurir bawaan
+
+Nomor WhatsApp CS 1, CS 2, Telegram, serta titik awal kurir Mendungan UMS sudah disetel sebagai nilai bawaan situs. Nomor kontak yang dipasang pada halaman publik dapat terlihat melalui tautan kontak situs. Logo LM dengan latar putih disertakan pada `assets/lm-logo-whitebg.png`.
