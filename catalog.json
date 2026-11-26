@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T14:32:45.789Z",
+  "updatedAt": "2026-11-26T15:13:55.328Z",
   "products": [
     {
       "id": "p1795694759739",
@@ -99,17 +99,17 @@
     },
     {
       "id": "hp-victus-15",
-      "brand": "HP",
-      "name": "Victus 15-fa2900TX",
-      "price": 16629000,
+      "brand": "LENOVO",
+      "name": "thinkpad t14s GEN 2",
+      "price": 6850000,
       "discount": 0,
       "category": "Gaming",
       "badge": "Gaming · cek stok",
-      "specs": "Intel Core i5-14450HX · NVIDIA GeForce RTX 4050 6GB · RAM 24GB DDR5 · SSD 512GB · Layar 15.6 inci FHD 144Hz",
-      "image": "assets/laptops/hp-victus-15.jpg",
+      "specs": "Proc core i5 gen 11\nMemory Ram 16gb DDR4\nSsd NVME 256gb\nKeyboard backlite (nyala lampu)\nLed 14 inch touch screen fhd\nFisik mulus \nsecond normal\nGARANSI 1 BULAN\nFULL SET",
       "images": [
-        "assets/laptops/hp-victus-15.jpg"
-      ]
+        "assets/uploads/laptop-hp-victus-15-1-1795706032949-oqlk.jpg"
+      ],
+      "image": "assets/uploads/laptop-hp-victus-15-1-1795706032949-oqlk.jpg"
     },
     {
       "id": "p4",
