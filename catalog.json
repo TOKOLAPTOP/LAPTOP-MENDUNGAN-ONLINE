@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T18:52:11.455Z",
+  "updatedAt": "2026-11-26T18:59:32.771Z",
   "products": [
     {
       "id": "p1795694759739",
@@ -127,17 +127,17 @@
     },
     {
       "id": "p5",
-      "brand": "Dell",
-      "name": "Latitude 5420",
-      "price": 5799000,
-      "discount": 12,
-      "category": "Kuliah",
+      "brand": "LENOVO",
+      "name": "thinkpad t490",
+      "price": 5750000,
+      "discount": 0,
+      "category": "Desain",
       "badge": "Harga spesial",
-      "specs": "Intel Core i5 Gen 11 · RAM 16GB · SSD 256GB · Layar 14 inci FHD",
-      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=82",
+      "specs": "Intel Core i7 Gen 8 · RAM 16GB · SSD 256GB · Layar 14 inci FHD-Keyboard backlite",
       "images": [
-        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=82"
-      ]
+        "assets/uploads/laptop-p5-1-1795719570658-5qqh.jpg"
+      ],
+      "image": "assets/uploads/laptop-p5-1-1795719570658-5qqh.jpg"
     },
     {
       "id": "p6",
