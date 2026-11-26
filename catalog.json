@@ -1,0 +1,203 @@
+{
+  "updatedAt": "2026-11-26T11:56:29.294Z",
+  "products": [
+    {
+      "id": "p1",
+      "brand": "Lenovo",
+      "name": "IdeaPad Slim 3",
+      "price": 6499000,
+      "discount": 8,
+      "category": "Kuliah",
+      "badge": "Cocok buat kuliah",
+      "specs": "Intel Core i5 Gen 12 · RAM 8GB · SSD 512GB · Layar 14 inci FHD",
+      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=82",
+      "images": [
+        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=82"
+      ]
+    },
+    {
+      "id": "p2",
+      "brand": "ASUS",
+      "name": "Vivobook 14",
+      "price": 7299000,
+      "discount": 0,
+      "category": "Kuliah",
+      "badge": "Ringan & praktis",
+      "specs": "Intel Core i5 · RAM 16GB · SSD 512GB · Layar 14 inci OLED",
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=900&q=82",
+      "images": [
+        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=900&q=82"
+      ]
+    },
+    {
+      "id": "p3",
+      "brand": "Acer",
+      "name": "Nitro V 15",
+      "price": 12999000,
+      "discount": 5,
+      "category": "Gaming",
+      "badge": "Siap nge-game",
+      "specs": "Intel Core i5 H-series · RAM 16GB · SSD 512GB · GeForce RTX 4050",
+      "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=900&q=82",
+      "images": [
+        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=900&q=82"
+      ]
+    },
+    {
+      "id": "rog-strix-g16",
+      "brand": "ASUS ROG",
+      "name": "Strix G16 G614JU",
+      "price": 19999000,
+      "discount": 0,
+      "category": "Gaming",
+      "badge": "Gaming · cek stok",
+      "specs": "Intel Core i5-13450HX · NVIDIA GeForce RTX 4050 6GB · RAM 16GB · SSD 512GB · Layar 16 inci FHD+ 165Hz",
+      "image": "assets/laptops/asus-rog-strix-g16.jpg",
+      "images": [
+        "assets/laptops/asus-rog-strix-g16.jpg"
+      ]
+    },
+    {
+      "id": "msi-katana-15",
+      "brand": "MSI",
+      "name": "Katana 15 B13VEK",
+      "price": 18619000,
+      "discount": 0,
+      "category": "Gaming",
+      "badge": "Gaming · cek stok",
+      "specs": "Intel Core i7-13620H · NVIDIA GeForce RTX 4050 · RAM 16GB · SSD NVMe 1TB · Layar 15.6 inci FHD 144Hz",
+      "image": "assets/laptops/msi-katana-15.jpg",
+      "images": [
+        "assets/laptops/msi-katana-15.jpg"
+      ]
+    },
+    {
+      "id": "hp-victus-15",
+      "brand": "HP",
+      "name": "Victus 15-fa2900TX",
+      "price": 16629000,
+      "discount": 0,
+      "category": "Gaming",
+      "badge": "Gaming · cek stok",
+      "specs": "Intel Core i5-14450HX · NVIDIA GeForce RTX 4050 6GB · RAM 24GB DDR5 · SSD 512GB · Layar 15.6 inci FHD 144Hz",
+      "image": "assets/laptops/hp-victus-15.jpg",
+      "images": [
+        "assets/laptops/hp-victus-15.jpg"
+      ]
+    },
+    {
+      "id": "p4",
+      "brand": "HP",
+      "name": "Pavilion Aero 13",
+      "price": 8999000,
+      "discount": 0,
+      "category": "Desain",
+      "badge": "Tipis & ringan",
+      "specs": "AMD Ryzen 7 · RAM 16GB · SSD 512GB · Layar 13.3 inci WUXGA",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=82",
+      "images": [
+        "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=82"
+      ]
+    },
+    {
+      "id": "p5",
+      "brand": "Dell",
+      "name": "Latitude 5420",
+      "price": 5799000,
+      "discount": 12,
+      "category": "Kuliah",
+      "badge": "Harga spesial",
+      "specs": "Intel Core i5 Gen 11 · RAM 16GB · SSD 256GB · Layar 14 inci FHD",
+      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=82",
+      "images": [
+        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=82"
+      ]
+    },
+    {
+      "id": "p6",
+      "brand": "Apple",
+      "name": "MacBook Air M1",
+      "price": 11499000,
+      "discount": 0,
+      "category": "Desain",
+      "badge": "Favorit kreator",
+      "specs": "Apple M1 · RAM 8GB · SSD 256GB · Layar Retina 13.3 inci",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=82",
+      "images": [
+        "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=82"
+      ]
+    },
+    {
+      "id": "t14s-g2",
+      "brand": "Lenovo",
+      "name": "ThinkPad T14s Gen 2",
+      "price": 6850000,
+      "discount": 0,
+      "category": "Kuliah",
+      "badge": "Touchscreen · Full set",
+      "specs": "Core i5 Gen 11 · RAM 8GB DDR4 · SSD NVMe 256GB · Keyboard backlit · LED 14 inci FHD touchscreen · Fisik mulus, second normal · Full set · Garansi 1 bulan",
+      "image": "assets/laptops/thinkpad-t14s-gen2.jpg",
+      "images": [
+        "assets/laptops/thinkpad-t14s-gen2.jpg"
+      ]
+    },
+    {
+      "id": "x390",
+      "brand": "Lenovo",
+      "name": "ThinkPad X390",
+      "price": 4850000,
+      "discount": 0,
+      "category": "Kuliah",
+      "badge": "Full set · Garansi 1 bulan",
+      "specs": "Core i5 Gen 8 · RAM 16GB · SSD 256GB · LED 13.3 inci · Full set · Garansi 1 bulan",
+      "image": "assets/laptops/thinkpad-x390.jpg",
+      "images": [
+        "assets/laptops/thinkpad-x390.jpg"
+      ]
+    },
+    {
+      "id": "hp14s-cf25",
+      "brand": "HP",
+      "name": "14s-CF25",
+      "price": 4600000,
+      "discount": 0,
+      "category": "Kuliah",
+      "badge": "Keyboard backlit",
+      "specs": "Core i3 Gen 10 · RAM 8GB · SSD 256GB · Layar 14 inci · Keyboard backlit (lampu) · Full set · Garansi 1 bulan",
+      "image": "assets/laptops/hp-14s-cf25.jpg",
+      "images": [
+        "assets/laptops/hp-14s-cf25.jpg"
+      ]
+    }
+  ],
+  "sponsors": [
+    {
+      "id": "local-cekopi",
+      "name": "Cekopi",
+      "category": "Kopi · Mendungan",
+      "description": "Contoh tempat ngopi di sekitar Mendungan dan kampus UMS.",
+      "address": "Jl. Mendungan No. 13, Pabelan, Kartasura",
+      "emoji": "☕",
+      "image": "assets/sponsors/cekopi.jpg",
+      "link": "https://www.google.com/maps/search/?api=1&query=Cekopi+Mendungan+Pabelan+Kartasura"
+    },
+    {
+      "id": "local-lightspace",
+      "name": "LIGHTSPACE Coffee & Eatery",
+      "category": "Kafe · Mendungan",
+      "description": "Contoh kafe untuk ngopi, makan, atau nugas dekat UMS.",
+      "address": "Jl. Al Ikhlas, Mendungan, Pabelan, Kartasura",
+      "emoji": "🍰",
+      "image": "assets/sponsors/lightspace.png",
+      "link": "https://www.google.com/maps/search/?api=1&query=Lightspace+Coffee+Eatery+Mendungan+Kartasura"
+    }
+  ],
+  "settings": {
+    "phone": "6281392399300",
+    "phone2": "6285165437950",
+    "telegram": "6285165437950",
+    "courierOrigin": "Mendungan UMS",
+    "logo": "assets/lm-logo-whitebg.png",
+    "message": "Halo, saya tertarik dengan"
+  }
+}
