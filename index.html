@@ -337,6 +337,72 @@ button,a,select,input{-webkit-tap-highlight-color:transparent;touch-action:manip
 .faq-item p{margin:9px 0 2px;font-size:12px;line-height:1.7;color:#586274}
 @media(max-width:650px){.seo-box{padding:18px 15px}.seo-tag{font-size:10px;padding:4px 9px}}
 
+
+/* Fullscreen Photo Zoom Lightbox (Pinch, Double-Tap, Drag Pan & Mouse Wheel) */
+#detailImage{cursor:zoom-in}
+.zoom-hint-pill{
+  position:absolute;right:10px;bottom:10px;z-index:2;
+  background:#10182cb8;color:#fff;
+  font-size:10.5px;font-weight:800;
+  padding:5px 10px;border-radius:99px;
+  pointer-events:none;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  display:inline-flex;align-items:center;gap:5px;
+}
+#zoomModal.modal-backdrop{
+  z-index:60;
+  background:#070a12f2;
+  padding:0!important;
+  align-items:stretch!important;
+  justify-content:stretch!important;
+  touch-action:none;user-select:none;-webkit-user-select:none;
+}
+.zoom-stage{
+  position:relative;width:100vw;height:100dvh;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;touch-action:none;
+}
+#zoomImg{
+  max-width:96vw;max-height:84dvh;
+  object-fit:contain;
+  transform-origin:center center;
+  will-change:transform;
+  cursor:grab;
+  transition:transform .14s ease-out;
+}
+#zoomImg.dragging{cursor:grabbing;transition:none}
+.zoom-topbar{
+  position:fixed;top:0;left:0;right:0;z-index:62;
+  padding:calc(12px + env(safe-area-inset-top)) 16px 12px;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  background:linear-gradient(180deg,#070a12cc,transparent);
+  color:#fff;pointer-events:none;
+}
+.zoom-topbar > *{pointer-events:auto}
+.zoom-counter{font-size:13px;font-weight:800;background:#ffffff1f;padding:6px 12px;border-radius:99px;backdrop-filter:blur(6px)}
+.zoom-controls{
+  position:fixed;bottom:0;left:0;right:0;z-index:62;
+  padding:12px 16px calc(16px + env(safe-area-inset-bottom));
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(0deg,#070a12cc,transparent);
+  pointer-events:none;
+}
+.zoom-controls > *{pointer-events:auto}
+.zctrl-btn{
+  border:1px solid #ffffff38;background:#1a2236d9;color:#fff;
+  height:40px;min-width:40px;padding:0 13px;border-radius:99px;
+  font-size:14px;font-weight:800;backdrop-filter:blur(8px);
+  display:inline-flex;align-items:center;justify-content:center;gap:5px;
+}
+.zctrl-btn:active{transform:scale(.93)}
+.zoom-nav{
+  position:fixed;top:50%;transform:translateY(-50%);z-index:62;
+  width:42px;height:42px;border-radius:50%;border:1px solid #ffffff33;
+  background:#1a2236cc;color:#fff;font-size:22px;font-weight:800;
+  display:none;place-items:center;backdrop-filter:blur(6px);
+}
+.zoom-nav.prev{left:12px}.zoom-nav.next{right:12px}
+#zoomModal.multi .zoom-nav{display:grid}
+
 </style></head>
 <body>
 <div class="topline"><div class="wrap"><div class="ticker-window"><div class="ticker-track"><span class="ticker-item">📍 <strong>Layanan COD Solo Raya · Surakarta, Sukoharjo, Karanganyar, Boyolali, Sragen, Wonogiri, Klaten</strong> &nbsp; ✦ &nbsp; <strong>TOKO ONLINE · Tidak ada toko fisik · Konfirmasi COD ke CS/admin</strong></span><span class="ticker-item" aria-hidden="true">📍 <strong>Layanan COD Solo Raya · Surakarta, Sukoharjo, Karanganyar, Boyolali, Sragen, Wonogiri, Klaten</strong> &nbsp; ✦ &nbsp; <strong>TOKO ONLINE · Tidak ada toko fisik · Konfirmasi COD ke CS/admin</strong></span></div></div></div></div>
@@ -438,7 +504,23 @@ button,a,select,input{-webkit-tap-highlight-color:transparent;touch-action:manip
 <div class="modal-backdrop" id="productModal"><div class="modal"><div class="modal-head"><h3 id="productModalTitle">Tambah laptop</h3><button class="xbtn" data-close="productModal">×</button></div><input id="editId" type="hidden"><div class="form-grid"><div class="field"><label>Merek</label><input id="pBrand" placeholder="Contoh: Lenovo"></div><div class="field"><label>Nama / seri laptop</label><input id="pName" placeholder="Contoh: ThinkPad X1 Carbon"></div></div><div class="form-grid"><div class="field"><label>Harga (rupiah)</label><input id="pPrice" type="number" min="0" placeholder="6500000"></div><div class="field"><label>Diskon (%)</label><input id="pDiscount" type="number" min="0" max="90" placeholder="0"></div></div><div class="form-grid"><div class="field"><label>Kategori</label><select id="pCategory"><option>Kuliah</option><option>Gaming</option><option>Desain</option></select></div><div class="field"><label>Label produk (opsional)</label><input id="pBadge" placeholder="Contoh: Pilihan admin"></div></div><div class="field"><label>Spesifikasi (pisahkan dengan koma)</label><textarea id="pSpecs" placeholder="Core i5 Gen 11, RAM 16GB, SSD 512GB"></textarea></div><div class="field"><label>Foto laptop — hingga 3 foto (bisa pilih satu per satu atau sekaligus)</label><div id="pPhotoPreview" style="display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 8px"></div><input id="pImage" placeholder="URL foto utama (opsional, kosongkan jika upload dari galeri)"><input id="pUpload" type="file" accept="image/*" multiple style="margin-top:8px;font-size:12px"><p class="hint" id="pImageHint">Pilih foto dari HP/laptop (maksimal 3 foto per produk).</p></div><div class="form-actions"><button class="btn secondary" data-close="productModal">Batal</button><button class="btn" id="saveProduct">Simpan produk</button></div></div></div>
 <div class="modal-backdrop" id="contactChooser"><div class="cs-bubble-box" role="dialog" aria-label="Pilih CS WhatsApp"><a class="cs-bubble-pill" id="cs1Link" href="#" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.93.56 3.73 1.53 5.25L2 22l5.01-1.62a9.84 9.84 0 0 0 5.03 1.37h.01c5.46 0 9.91-4.45 9.91-9.91A9.91 9.91 0 0 0 12.04 2Z"/></svg> CS 1</a><a class="cs-bubble-pill" id="cs2Link" href="#" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.93.56 3.73 1.53 5.25L2 22l5.01-1.62a9.84 9.84 0 0 0 5.03 1.37h.01c5.46 0 9.91-4.45 9.91-9.91A9.91 9.91 0 0 0 12.04 2Z"/></svg> CS 2</a><button type="button" class="cs-bubble-close" data-close="contactChooser" aria-label="Tutup">×</button></div></div>
 <div class="modal-backdrop" id="sponsorModal"><div class="modal small"><div class="modal-head"><h3 id="sponsorModalTitle">Tambah UMKM</h3><button class="xbtn" data-close="sponsorModal">×</button></div><input id="sponsorEditId" type="hidden"><div class="field"><label>Nama usaha</label><input id="sName" placeholder="Contoh: kedai kopi sekitar UMS"></div><div class="form-grid"><div class="field"><label>Kategori / area singkat</label><input id="sCategory" placeholder="Kuliner · Mendungan"></div><div class="field"><label>Ikon cadangan (opsional)</label><input id="sEmoji" placeholder="☕" maxlength="5"></div></div><div class="field"><label>Foto resto / UMKM (URL atau unggah foto asli)</label><input id="sImage" type="url" placeholder="https://..."><input id="sUpload" type="file" accept="image/*" style="margin-top:8px;font-size:12px"><p class="hint" id="sImageHint">Foto asli resto bisa diunggah atau ditambahkan lewat URL; foto disimpan lokal di browser ini.</p></div><div class="field"><label>Deskripsi singkat</label><textarea id="sDescription" placeholder="Jajanan, kopi, atau tempat nongkrong..."></textarea></div><div class="field"><label>Alamat / area</label><input id="sAddress" placeholder="Alamat singkat"></div><div class="field"><label>Link Google Maps, WhatsApp, atau Instagram</label><input id="sLink" type="url" placeholder="https://..."></div><p class="hint">Listing tampil sebagai contoh/rekomendasi kecil. Pastikan pemilik usaha menyetujui sebelum mempromosikannya sebagai sponsor.</p><div class="form-actions"><button class="btn secondary" data-close="sponsorModal">Batal</button><button class="btn" id="saveSponsor">Simpan UMKM</button></div></div></div>
-<div class="modal-backdrop" id="detailModal"><div class="modal small"><div class="modal-head"><h3 id="detailTitle"></h3><button class="xbtn" data-close="detailModal">×</button></div><div class="detail-gallery-wrap" id="detailGalleryWrap"><button type="button" class="gallery-nav prev" id="detailPrevBtn" aria-label="Foto sebelumnya">‹</button><img id="detailImage" onerror="handleImgErr(this,'dim')" style="width:100%;height:240px;object-fit:contain;display:block;background:#f0f2f7"><button type="button" class="gallery-nav next" id="detailNextBtn" aria-label="Foto berikutnya">›</button></div><div class="detail-thumbs" id="detailThumbs"></div><div id="detailInfo" style="padding:14px 0"></div><div class="detail-share-row"><button class="btn" id="detailWA" style="width:100%;background:#188b60"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.93.56 3.73 1.53 5.25L2 22l5.01-1.62a9.84 9.84 0 0 0 5.03 1.37h.01c5.46 0 9.91-4.45 9.91-9.91A9.91 9.91 0 0 0 12.04 2Z"/></svg> Tanya &amp; Beli via WA</button><button type="button" class="share-native-btn" id="detailShareBtn" title="Bagikan laptop ini">↗ Bagikan</button></div></div></div>
+<div class="modal-backdrop" id="detailModal"><div class="modal small"><div class="modal-head"><h3 id="detailTitle"></h3><button class="xbtn" data-close="detailModal">×</button></div><div class="detail-gallery-wrap" id="detailGalleryWrap"><button type="button" class="gallery-nav prev" id="detailPrevBtn" aria-label="Foto sebelumnya">‹</button><img id="detailImage" title="Klik untuk perbesar / zoom foto" onerror="handleImgErr(this,'dim')" style="width:100%;height:240px;object-fit:contain;display:block;background:#f0f2f7"><span class="zoom-hint-pill">🔍 Klik perbesar</span><button type="button" class="gallery-nav next" id="detailNextBtn" aria-label="Foto berikutnya">›</button></div><div class="detail-thumbs" id="detailThumbs"></div><div id="detailInfo" style="padding:14px 0"></div><div class="detail-share-row"><button class="btn" id="detailWA" style="width:100%;background:#188b60"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.93.56 3.73 1.53 5.25L2 22l5.01-1.62a9.84 9.84 0 0 0 5.03 1.37h.01c5.46 0 9.91-4.45 9.91-9.91A9.91 9.91 0 0 0 12.04 2Z"/></svg> Tanya &amp; Beli via WA</button><button type="button" class="share-native-btn" id="detailShareBtn" title="Bagikan laptop ini">↗ Bagikan</button></div></div></div>
+<div class="modal-backdrop" id="zoomModal" role="dialog" aria-label="Perbesar foto laptop">
+  <div class="zoom-topbar">
+    <span class="zoom-counter" id="zoomCounter">1 / 1</span>
+    <button type="button" class="zctrl-btn" data-close="zoomModal" aria-label="Tutup zoom">✕ Tutup</button>
+  </div>
+  <button type="button" class="zoom-nav prev" id="zoomPrevBtn" aria-label="Foto sebelumnya">‹</button>
+  <div class="zoom-stage" id="zoomStage">
+    <img id="zoomImg" alt="Foto laptop diperbesar" draggable="false" onerror="handleImgErr(this,'dim')">
+  </div>
+  <button type="button" class="zoom-nav next" id="zoomNextBtn" aria-label="Foto berikutnya">›</button>
+  <div class="zoom-controls">
+    <button type="button" class="zctrl-btn" id="zoomOutBtn" aria-label="Perkecil">−</button>
+    <button type="button" class="zctrl-btn" id="zoomResetBtn">100%</button>
+    <button type="button" class="zctrl-btn" id="zoomInBtn" aria-label="Perbesar">＋</button>
+  </div>
+</div>
 <div class="toast" id="toast"></div>
 <script>
 const defaultProducts=[
@@ -998,4 +1080,133 @@ const _seoOrigRenderProducts=renderProducts;
 renderProducts=function(){_seoOrigRenderProducts();updateProductSeoSchema()};
 updateProductSeoSchema();
 
-</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a609f3e0ab079fd1',t:'MTc5NTcwNzIxOA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a609f3e0ab079fd1',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
+
+// === Fullscreen Interactive Photo Zoom (Pinch, Double-Tap, Drag & Mouse Wheel) ===
+(function(){
+  const modal=document.getElementById('zoomModal'),stage=document.getElementById('zoomStage'),img=document.getElementById('zoomImg'),
+        counter=document.getElementById('zoomCounter'),btnIn=document.getElementById('zoomInBtn'),btnOut=document.getElementById('zoomOutBtn'),
+        btnReset=document.getElementById('zoomResetBtn'),btnPrev=document.getElementById('zoomPrevBtn'),btnNext=document.getElementById('zoomNextBtn'),
+        detailImg=document.getElementById('detailImage');
+  if(!modal||!img||!detailImg)return;
+
+  let scale=1,tx=0,ty=0,isDragging=false,startX=0,startY=0,lastTap=0,pinchStartDist=0,pinchStartScale=1,swipeStartX=0;
+
+  function clampPan(){
+    if(scale<=1){tx=0;ty=0;return}
+    let maxX=(window.innerWidth*(scale-1))/2,maxY=(window.innerHeight*(scale-1))/2;
+    tx=Math.max(-maxX,Math.min(maxX,tx));
+    ty=Math.max(-maxY,Math.min(maxY,ty));
+  }
+  function applyZoom(){
+    clampPan();
+    img.style.transform=`translate3d(${tx}px,${ty}px,0) scale(${scale})`;
+    if(btnReset)btnReset.textContent=Math.round(scale*100)+'%';
+  }
+  function resetZoom(){scale=1;tx=0;ty=0;applyZoom()}
+  function syncZoomPhoto(){
+    if(!detailImages.length)return;
+    delete img.dataset.rawTried;
+    img.src=detailImages[detailPhotoIndex];
+    modal.classList.toggle('multi',detailImages.length>1);
+    if(counter)counter.textContent=(detailPhotoIndex+1)+' / '+detailImages.length;
+    resetZoom();
+  }
+  function stepPhoto(dir){
+    if(detailImages.length<2)return;
+    setDetailPhoto(detailPhotoIndex+dir);
+    syncZoomPhoto();
+  }
+
+  detailImg.addEventListener('click',()=>{
+    if(!detailImages.length)return;
+    syncZoomPhoto();
+    openModal('zoomModal');
+  });
+
+  if(btnIn)btnIn.onclick=()=>{scale=Math.min(4,+(scale+0.5).toFixed(2));applyZoom()};
+  if(btnOut)btnOut.onclick=()=>{scale=Math.max(1,+(scale-0.5).toFixed(2));applyZoom()};
+  if(btnReset)btnReset.onclick=resetZoom;
+  if(btnPrev)btnPrev.onclick=()=>stepPhoto(-1);
+  if(btnNext)btnNext.onclick=()=>stepPhoto(1);
+
+  // Close when tapping dark background outside zoomed photo (when scale===1)
+  stage.addEventListener('click',e=>{if(e.target===stage&&scale===1)closeModal('zoomModal')});
+
+  // Desktop mouse wheel zoom
+  stage.addEventListener('wheel',e=>{
+    e.preventDefault();
+    let delta=e.deltaY<0?0.3:-0.3;
+    scale=Math.min(4,Math.max(1,+(scale+delta).toFixed(2)));
+    applyZoom();
+  },{passive:false});
+
+  // Desktop mouse drag pan when zoomed + double-click toggle zoom
+  img.addEventListener('dblclick',e=>{
+    e.preventDefault();
+    if(scale>1)resetZoom();
+    else{scale=2.4;applyZoom()}
+  });
+  img.addEventListener('mousedown',e=>{
+    if(scale<=1)return;
+    e.preventDefault();isDragging=true;img.classList.add('dragging');
+    startX=e.clientX-tx;startY=e.clientY-ty;
+  });
+  window.addEventListener('mousemove',e=>{
+    if(!isDragging)return;
+    tx=e.clientX-startX;ty=e.clientY-startY;applyZoom();
+  });
+  window.addEventListener('mouseup',()=>{
+    if(isDragging){isDragging=false;img.classList.remove('dragging')}
+  });
+
+  // Mobile Touch: 2-finger pinch zoom, 1-finger pan when zoomed, 1-finger swipe next/prev when scale===1, & double-tap zoom!
+  stage.addEventListener('touchstart',e=>{
+    if(e.touches.length===2){
+      img.classList.add('dragging');
+      pinchStartDist=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
+      pinchStartScale=scale;
+    }else if(e.touches.length===1){
+      let now=Date.now();
+      if(now-lastTap<280){
+        e.preventDefault();
+        if(scale>1)resetZoom();
+        else{scale=2.4;applyZoom()}
+        lastTap=0;
+        return;
+      }
+      lastTap=now;
+      swipeStartX=e.touches[0].clientX;
+      if(scale>1){
+        isDragging=true;img.classList.add('dragging');
+        startX=e.touches[0].clientX-tx;startY=e.touches[0].clientY-ty;
+      }
+    }
+  },{passive:false});
+
+  stage.addEventListener('touchmove',e=>{
+    if(e.touches.length===2&&pinchStartDist>0){
+      e.preventDefault();
+      let dist=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
+      scale=Math.min(4,Math.max(1,pinchStartScale*(dist/pinchStartDist)));
+      applyZoom();
+    }else if(e.touches.length===1&&isDragging&&scale>1){
+      e.preventDefault();
+      tx=e.touches[0].clientX-startX;ty=e.touches[0].clientY-startY;
+      applyZoom();
+    }
+  },{passive:false});
+
+  stage.addEventListener('touchend',e=>{
+    img.classList.remove('dragging');
+    if(e.touches.length<2)pinchStartDist=0;
+    if(e.touches.length===0){
+      if(!isDragging&&scale===1&&detailImages.length>1&&e.changedTouches.length){
+        let dx=e.changedTouches[0].clientX-swipeStartX;
+        if(Math.abs(dx)>50)stepPhoto(dx<0?1:-1);
+      }
+      isDragging=false;
+    }
+  });
+})();
+
+</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a60b2b2e2e1a5f87',t:'MTc5NTcxOTk2OA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a60b2b2e2e1a5f87',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
