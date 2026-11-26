@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lm-online-v5';
+const CACHE_NAME = 'lm-online-v6';
 const CORE_ASSETS = [
   '/',
   '/index.html',
@@ -26,10 +26,9 @@ self.addEventListener('fetch', event => {
   const req = event.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
-  // NEVER intercept external APIs (e.g. api.github.com) — let browser talk directly!
-  if (url.origin !== self.location.origin) return;
+  // NEVER intercept external domains (api.github.com, raw.githubusercontent.com) or newly uploaded photos!
+  if (url.origin !== self.location.origin || url.pathname.includes('/assets/uploads/')) return;
 
-  // Always network-first with cache:'no-store' for catalog.json
   if (url.pathname.endsWith('catalog.json')) {
     event.respondWith(
       fetch(req, { cache: 'no-store' }).then(res => {
@@ -43,19 +42,19 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Network-first for HTML pages
   if (req.mode === 'navigate' || (req.headers.get('accept') || '').includes('text/html')) {
     event.respondWith(
       fetch(req, { cache: 'no-cache' }).then(res => {
-        const clone = res.clone();
-        caches.open(CACHE_NAME).then(c => c.put(req, clone));
+        if (res.ok) {
+          const clone = res.clone();
+          caches.open(CACHE_NAME).then(c => c.put(req, clone));
+        }
         return res;
       }).catch(() => caches.match(req) || caches.match('/index.html'))
     );
     return;
   }
 
-  // Stale-while-revalidate for local static assets
   event.respondWith(
     caches.match(req).then(cached => {
       const networkFetch = fetch(req).then(res => {

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /catalog.json
+
+Sitemap: https://laptopmedungan.com/sitemap.xml
