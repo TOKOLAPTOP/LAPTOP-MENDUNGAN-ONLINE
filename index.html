@@ -278,7 +278,7 @@ button,a,select,input{-webkit-tap-highlight-color:transparent;touch-action:manip
       <p class="hint" style="margin:8px 0 0">Cara buat token: klik <b>Buat Token GitHub Baru ↗</b> → pilih Expiration <i>No expiration</i> → pastikan kotak <b>repo</b> tercentang → klik <b>Generate token</b> → salin kodenya ke kolom di atas. Token aman karena hanya disimpan di browser Anda, tidak pernah ikut ter-upload ke publik.</p>
     </div>
   </details>
-</div><div class="admin-toolbar"><span class="hint" id="productCount"></span><button class="btn smallbtn" id="addProduct">＋ Tambah laptop</button></div><div class="admin-list" id="adminList"></div><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><div class="admin-toolbar"><div><strong style="font-size:14px">Sponsor / listing UMKM</strong><div class="hint">Tambah, edit, atau hapus tampilan UMKM.</div></div><button class="btn smallbtn" id="addSponsor">＋ Tambah UMKM</button></div><div class="admin-list" id="sponsorAdminList"></div><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><div class="modal-head"><h3 style="font-size:15px">Pengaturan toko</h3></div><div class="form-grid"><div class="field"><label>Nomor WhatsApp CS 1 (kode negara, tanpa +)</label><input id="settingsPhone" inputmode="numeric" placeholder="Contoh: 6281234567890"></div><div class="field"><label>Nomor WhatsApp CS 2 (opsional)</label><input id="settingsPhone2" inputmode="numeric" placeholder="Contoh: 6281234567891"></div><div class="field"><label>Telegram admin (username tanpa @ atau nomor internasional)</label><input id="settingsTelegram" placeholder="Contoh: adminLaptop atau 6281234567890"></div><div class="field"><label>PIN admin baru</label><input id="settingsPin" type="password" placeholder="Kosongkan jika tidak diubah"></div></div><hr style="border:0;border-top:1px solid var(--line);margin:8px 0 16px"><div class="modal-head"><h3 style="font-size:15px">Tarif Kurir COD per Jarak (acuan Maxim Bike)</h3></div><div class="field"><label>Titik awal kurir untuk rute Google Maps</label><input id="courierOrigin" placeholder="Masukkan alamat titik berangkat kurir"></div><p class="hint">Jarak dimasukkan pelanggan dari rute Google Maps. Acuan harga publik yang ditemukan: dalam kota Rp8.000 termasuk 3,05 km + Rp2.100/km; antarkota Rp8.000 termasuk 2 km + Rp3.000/km. Tarif Maxim berbeda per wilayah dan dapat berubah; angka di bawah adalah setelan kurir toko, silakan sesuaikan. Lihat <a href="https://kumparan.com/jendela-dunia/tarif-maxim-per-km-terbaru-yang-wajib-diketahui-penumpang-21aXL6YNpjF" target="_blank" rel="noopener">referensi tarif</a>.</p><div class="form-grid"><div class="field"><label>Dalam kota · biaya dasar (Rp)</label><input id="tariffLocalBase" type="number" min="0" step="500"></div><div class="field"><label>Dalam kota · sudah termasuk (km)</label><input id="tariffLocalKm" type="number" min="0" step="0.05"></div><div class="field"><label>Dalam kota · per km tambahan (Rp)</label><input id="tariffLocalPerKm" type="number" min="0" step="100"></div><div class="field"><label>Antarkota · biaya dasar (Rp)</label><input id="tariffInterBase" type="number" min="0" step="500"></div><div class="field"><label>Antarkota · sudah termasuk (km)</label><input id="tariffInterKm" type="number" min="0" step="0.1"></div><div class="field"><label>Antarkota · per km tambahan (Rp)</label><input id="tariffInterPerKm" type="number" min="0" step="100"></div></div><p class="hint"><b>Klasifikasi rute per wilayah</b> (sesuaikan berdasarkan titik awal kurir).</p><div class="form-grid"><div class="field"><label>Surakarta</label><select id="typeSurakarta"><option value="local">Dalam kota</option><option value="intercity">Antarkota</option></select></div><div class="field"><label>Sukoharjo</label><select id="typeSukoharjo"><option value="local">Dalam kota</option><option value="intercity">Antarkota</option></select></div><div class="field"><label>Karanganyar</label><select id="typeKaranganyar"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div><div class="field"><label>Boyolali</label><select id="typeBoyolali"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div><div class="field"><label>Sragen</label><select id="typeSragen"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div><div class="field"><label>Wonogiri</label><select id="typeWonogiri"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div><div class="field"><label>Klaten</label><select id="typeKlaten"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div></div><div class="field"><label>Logo toko (URL atau unggah gambar)</label><input id="settingsLogo" type="url" placeholder="https://..."><input id="settingsLogoUpload" type="file" accept="image/*" style="margin-top:8px;font-size:12px"><p class="hint" id="logoHint">Pilih logo berbentuk kotak; tampil di header toko.</p></div><div class="field"><label>Pesan pembuka WhatsApp</label><input id="settingsMessage" placeholder="Halo, saya tertarik dengan laptop..."></div><p class="hint upload-hint">Data tersimpan di browser/perangkat ini (localStorage). Atur nomor WA CS 1/CS 2 dan username Telegram agar tombol kontak berfungsi. Logo unggahan juga tersimpan di browser ini; untuk sinkronisasi perangkat berbeda diperlukan backend.</p><div class="form-actions"><button class="btn" id="saveSettings">Simpan pengaturan</button></div></div></div>
+</div><div class="admin-toolbar"><span class="hint" id="productCount"></span><button class="btn smallbtn" id="addProduct">＋ Tambah laptop</button></div><div class="admin-list" id="adminList"></div><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><div class="admin-toolbar"><div><strong style="font-size:14px">Sponsor / listing UMKM</strong><div class="hint">Tambah, edit, atau hapus tampilan UMKM.</div></div><button class="btn smallbtn" id="addSponsor">＋ Tambah UMKM</button></div><div class="admin-list" id="sponsorAdminList"></div><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><div class="modal-head"><h3 style="font-size:15px">Pengaturan toko</h3></div><div class="form-grid"><div class="field"><label>Nomor WhatsApp CS 1 (kode negara, tanpa +)</label><input id="settingsPhone" inputmode="numeric" placeholder="Contoh: 6281234567890"></div><div class="field"><label>Nomor WhatsApp CS 2 (opsional)</label><input id="settingsPhone2" inputmode="numeric" placeholder="Contoh: 6281234567891"></div><div class="field"><label>Telegram admin (username tanpa @ atau nomor internasional)</label><input id="settingsTelegram" placeholder="Contoh: adminLaptop atau 6281234567890"></div><div class="field"><label>PIN admin baru</label><input id="settingsPin" type="password" placeholder="Kosongkan jika tidak diubah"></div></div><hr style="border:0;border-top:1px solid var(--line);margin:8px 0 16px"><div class="modal-head"><h3 style="font-size:15px">Tarif Kurir COD per Jarak (acuan Maxim Bike)</h3></div><div class="field"><label>Titik awal kurir untuk rute Google Maps</label><input id="courierOrigin" placeholder="Masukkan alamat titik berangkat kurir"></div><p class="hint">Jarak dimasukkan pelanggan dari rute Google Maps. Acuan harga publik yang ditemukan: dalam kota Rp8.000 termasuk 3,05 km + Rp2.100/km; antarkota Rp8.000 termasuk 2 km + Rp3.000/km. Tarif Maxim berbeda per wilayah dan dapat berubah; angka di bawah adalah setelan kurir toko, silakan sesuaikan. Lihat <a href="https://kumparan.com/jendela-dunia/tarif-maxim-per-km-terbaru-yang-wajib-diketahui-penumpang-21aXL6YNpjF" target="_blank" rel="noopener">referensi tarif</a>.</p><div class="form-grid"><div class="field"><label>Dalam kota · biaya dasar (Rp)</label><input id="tariffLocalBase" type="number" min="0" step="500"></div><div class="field"><label>Dalam kota · sudah termasuk (km)</label><input id="tariffLocalKm" type="number" min="0" step="0.05"></div><div class="field"><label>Dalam kota · per km tambahan (Rp)</label><input id="tariffLocalPerKm" type="number" min="0" step="100"></div><div class="field"><label>Antarkota · biaya dasar (Rp)</label><input id="tariffInterBase" type="number" min="0" step="500"></div><div class="field"><label>Antarkota · sudah termasuk (km)</label><input id="tariffInterKm" type="number" min="0" step="0.1"></div><div class="field"><label>Antarkota · per km tambahan (Rp)</label><input id="tariffInterPerKm" type="number" min="0" step="100"></div></div><p class="hint"><b>Klasifikasi rute per wilayah</b> (sesuaikan berdasarkan titik awal kurir).</p><div class="form-grid"><div class="field"><label>Surakarta</label><select id="typeSurakarta"><option value="local">Dalam kota</option><option value="intercity">Antarkota</option></select></div><div class="field"><label>Sukoharjo</label><select id="typeSukoharjo"><option value="local">Dalam kota</option><option value="intercity">Antarkota</option></select></div><div class="field"><label>Karanganyar</label><select id="typeKaranganyar"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div><div class="field"><label>Boyolali</label><select id="typeBoyolali"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div><div class="field"><label>Sragen</label><select id="typeSragen"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div><div class="field"><label>Wonogiri</label><select id="typeWonogiri"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div><div class="field"><label>Klaten</label><select id="typeKlaten"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div></div><div class="field"><label>Logo toko (URL atau unggah gambar)</label><input id="settingsLogo" type="url" placeholder="https://..."><input id="settingsLogoUpload" type="file" accept="image/*" style="margin-top:8px;font-size:12px"><p class="hint" id="logoHint">Pilih logo berbentuk kotak; tampil di header toko.</p></div><div class="field"><label>Pesan pembuka WhatsApp</label><input id="settingsMessage" placeholder="Halo, saya tertarik dengan laptop..."></div><p class="hint upload-hint">Data tersimpan di browser/perangkat ini (localStorage). Atur nomor WA CS 1/CS 2 dan username Telegram agar tombol kontak berfungsi. Logo unggahan juga tersimpan di browser ini; untuk sinkronisasi perangkat berbeda diperlukan backend.</p><div class="form-actions"><button class="btn" id="saveSettings">💾 Simpan &amp; Terbitkan Pengaturan</button></div></div></div>
 <div class="modal-backdrop" id="productModal"><div class="modal"><div class="modal-head"><h3 id="productModalTitle">Tambah laptop</h3><button class="xbtn" data-close="productModal">×</button></div><input id="editId" type="hidden"><div class="form-grid"><div class="field"><label>Merek</label><input id="pBrand" placeholder="Contoh: Lenovo"></div><div class="field"><label>Nama / seri laptop</label><input id="pName" placeholder="Contoh: ThinkPad X1 Carbon"></div></div><div class="form-grid"><div class="field"><label>Harga (rupiah)</label><input id="pPrice" type="number" min="0" placeholder="6500000"></div><div class="field"><label>Diskon (%)</label><input id="pDiscount" type="number" min="0" max="90" placeholder="0"></div></div><div class="form-grid"><div class="field"><label>Kategori</label><select id="pCategory"><option>Kuliah</option><option>Gaming</option><option>Desain</option></select></div><div class="field"><label>Label produk (opsional)</label><input id="pBadge" placeholder="Contoh: Pilihan admin"></div></div><div class="field"><label>Spesifikasi (pisahkan dengan koma)</label><textarea id="pSpecs" placeholder="Core i5 Gen 11, RAM 16GB, SSD 512GB"></textarea></div><div class="field"><label>Foto laptop — hingga 3 gambar per produk</label><input id="pImage" placeholder="URL foto utama (opsional)"><input id="pUpload" type="file" accept="image/*" multiple style="margin-top:8px;font-size:12px"><p class="hint" id="pImageHint">Pilih hingga 3 foto sekaligus. Foto akan dikompres dan disimpan lokal di browser ini.</p></div><div class="form-actions"><button class="btn secondary" data-close="productModal">Batal</button><button class="btn" id="saveProduct">Simpan produk</button></div></div></div>
 <div class="modal-backdrop" id="contactChooser"><div class="cs-bubble-box" role="dialog" aria-label="Pilih CS WhatsApp"><a class="cs-bubble-pill" id="cs1Link" href="#" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.93.56 3.73 1.53 5.25L2 22l5.01-1.62a9.84 9.84 0 0 0 5.03 1.37h.01c5.46 0 9.91-4.45 9.91-9.91A9.91 9.91 0 0 0 12.04 2Z"/></svg> CS 1</a><a class="cs-bubble-pill" id="cs2Link" href="#" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.93.56 3.73 1.53 5.25L2 22l5.01-1.62a9.84 9.84 0 0 0 5.03 1.37h.01c5.46 0 9.91-4.45 9.91-9.91A9.91 9.91 0 0 0 12.04 2Z"/></svg> CS 2</a><button type="button" class="cs-bubble-close" data-close="contactChooser" aria-label="Tutup">×</button></div></div>
 <div class="modal-backdrop" id="sponsorModal"><div class="modal small"><div class="modal-head"><h3 id="sponsorModalTitle">Tambah UMKM</h3><button class="xbtn" data-close="sponsorModal">×</button></div><input id="sponsorEditId" type="hidden"><div class="field"><label>Nama usaha</label><input id="sName" placeholder="Contoh: kedai kopi sekitar UMS"></div><div class="form-grid"><div class="field"><label>Kategori / area singkat</label><input id="sCategory" placeholder="Kuliner · Mendungan"></div><div class="field"><label>Ikon cadangan (opsional)</label><input id="sEmoji" placeholder="☕" maxlength="5"></div></div><div class="field"><label>Foto resto / UMKM (URL atau unggah foto asli)</label><input id="sImage" type="url" placeholder="https://..."><input id="sUpload" type="file" accept="image/*" style="margin-top:8px;font-size:12px"><p class="hint" id="sImageHint">Foto asli resto bisa diunggah atau ditambahkan lewat URL; foto disimpan lokal di browser ini.</p></div><div class="field"><label>Deskripsi singkat</label><textarea id="sDescription" placeholder="Jajanan, kopi, atau tempat nongkrong..."></textarea></div><div class="field"><label>Alamat / area</label><input id="sAddress" placeholder="Alamat singkat"></div><div class="field"><label>Link Google Maps, WhatsApp, atau Instagram</label><input id="sLink" type="url" placeholder="https://..."></div><p class="hint">Listing tampil sebagai contoh/rekomendasi kecil. Pastikan pemilik usaha menyetujui sebelum mempromosikannya sebagai sponsor.</p><div class="form-actions"><button class="btn secondary" data-close="sponsorModal">Batal</button><button class="btn" id="saveSponsor">Simpan UMKM</button></div></div></div>
@@ -303,11 +303,12 @@ const defaultSponsors=[
 {id:'local-cekopi',name:'Cekopi',category:'Kopi · Mendungan',description:'Contoh tempat ngopi di sekitar Mendungan dan kampus UMS.',address:'Jl. Mendungan No. 13, Pabelan, Kartasura',emoji:'☕',image:'assets/sponsors/cekopi.jpg',link:'https://www.google.com/maps/search/?api=1&query=Cekopi+Mendungan+Pabelan+Kartasura'},
 {id:'local-lightspace',name:'LIGHTSPACE Coffee & Eatery',category:'Kafe · Mendungan',description:'Contoh kafe untuk ngopi, makan, atau nugas dekat UMS.',address:'Jl. Al Ikhlas, Mendungan, Pabelan, Kartasura',emoji:'🍰',image:'assets/sponsors/lightspace.png',link:'https://www.google.com/maps/search/?api=1&query=Lightspace+Coffee+Eatery+Mendungan+Kartasura'}];
 const DEFAULT_STORE_SETTINGS={phone:'6281392399300',phone2:'6283150768681',telegram:'6285165437950',courierOrigin:'Mendungan UMS',logo:'assets/lm-logo-whitebg.png',message:'Halo, saya tertarik dengan'};const get=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}};let hasUnpublishedChanges=localStorage.getItem('lmo_dirty')==='1';
-let products=hasUnpublishedChanges?get('lmo_products',defaultProducts):defaultProducts,
-    localSavedSettings=get('lmo_settings',{}),
-    settings={...DEFAULT_STORE_SETTINGS,...(hasUnpublishedChanges?localSavedSettings:{pin:localSavedSettings.pin})},
+let localSavedSettings=get('lmo_settings',{}),
+    hasCachedRemote=!!localStorage.getItem('lmo_last_published_ts'),
+    products=(hasUnpublishedChanges||hasCachedRemote)?get('lmo_products',defaultProducts):defaultProducts,
+    settings={...DEFAULT_STORE_SETTINGS,...((hasUnpublishedChanges||hasCachedRemote)?localSavedSettings:{pin:localSavedSettings.pin})},
     likes=get('lmo_likes',{}),likedByVisitor=get('lmo_liked',{}),
-    sponsors=hasUnpublishedChanges?get('lmo_sponsors',defaultSponsors):defaultSponsors,
+    sponsors=(hasUnpublishedChanges||hasCachedRemote)?get('lmo_sponsors',defaultSponsors):defaultSponsors,
     uploadedImages=[],detailImages=[],detailPhotoIndex=0,uploadedSponsorImage='',uploadedLogo='',customerMapUrl='',liveRemoteVersion=0;
 if(settings.pin&&settings.pin.length<8){delete settings.pin;localStorage.setItem('lmo_settings',JSON.stringify(settings))}
 if(!settings.logo||settings.logo==='assets/lm-logo-clean.png'||settings.logo==='assets/lm-logo-user.png'){settings.logo='assets/lm-logo-whitebg.png'}
@@ -383,7 +384,7 @@ document.getElementById('loginBtn').onclick=async()=>{
       localStorage.setItem('lmo_owner_verified','1');
       settings.pin=pinVal;
       localStorage.setItem('lmo_settings',JSON.stringify(settings));
-      closeModal('loginModal');renderAdmin();openModal('adminModal');
+      closeModal('loginModal');renderAdmin();openModal('adminModal');if(!hasUnpublishedChanges)loadLiveCatalog(false);
       toast('Verifikasi pemilik berhasil! Selamat datang di Panel Admin.');
     }catch(err){
       toast(err.message||'Verifikasi gagal.');
@@ -393,7 +394,7 @@ document.getElementById('loginBtn').onclick=async()=>{
     return;
   }
   if(pinVal===settings.pin&&isOwnerVerifiedDevice()){
-    closeModal('loginModal');renderAdmin();openModal('adminModal');
+    closeModal('loginModal');renderAdmin();openModal('adminModal');if(!hasUnpublishedChanges)loadLiveCatalog(false);
   }else{
     toast('PIN salah.');
   }
@@ -428,13 +429,17 @@ function syncFormInputsToSettings(){
   if(el)el.addEventListener('change',()=>{markDirty(true)});
 });
 document.getElementById('saveSettings').onclick=async()=>{
+  let sBtn=document.getElementById('saveSettings'),origLbl=sBtn.textContent;
   syncFormInputsToSettings();
   markDirty(true);
   if(getGhConfig().token){
+    sBtn.disabled=true;sBtn.textContent='⏳ Menyimpan ke Server...';
     toast('Menyimpan & menerbitkan pengaturan ke server...');
     await publishCatalogToGithub();
+    sBtn.disabled=false;sBtn.textContent='✅ Pengaturan Tersimpan!';
+    setTimeout(()=>{sBtn.textContent=origLbl},2200);
   }else{
-    toast('Pengaturan disimpan! Klik Terbitkan ke Website agar tampil ke semua pembeli.');
+    toast('Pengaturan disimpan lokal! Isi Token GitHub di atas agar tampil ke semua pembeli.');
   }
 };document.getElementById('usePhoneLocation').onclick=usePhoneLocation;document.getElementById('deliveryAddress').addEventListener('input',()=>{customerMapUrl='';document.getElementById('deliveryMapLink').style.display='none'});document.getElementById('checkDelivery').onclick=checkDeliveryFee;updateCourierOriginText();document.getElementById('year').textContent=new Date().getFullYear();renderProducts();renderSponsors();updateLinks();
 
@@ -455,6 +460,11 @@ function updateSyncBanner(){
     el.innerHTML='<b style="color:#12845d">✓ Terhubung ke GitHub ('+esc(repo)+').</b> Semua perubahan sudah sinkron dengan website publik.';
   }
 }
+function base64ToUtf8(b64){
+  let clean=String(b64||'').replace(/\s+/g,''),bin=atob(clean),bytes=new Uint8Array(bin.length);
+  for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+  return new TextDecoder().decode(bytes);
+}
 function applyRemoteCatalog(data,forceOverwrite=false){
   if(!data||typeof data!=='object')return false;
   if(hasUnpublishedChanges&&!forceOverwrite)return false;
@@ -471,21 +481,40 @@ function applyRemoteCatalog(data,forceOverwrite=false){
   localStorage.setItem('lmo_products',JSON.stringify(products));
   localStorage.setItem('lmo_sponsors',JSON.stringify(sponsors));
   localStorage.setItem('lmo_settings',JSON.stringify(settings));
+  if(remoteTs)localStorage.setItem('lmo_last_published_ts',String(remoteTs));
   if(forceOverwrite)markDirty(false);
   renderProducts();renderSponsors();updateLinks();updateCourierOriginText();
   if(document.getElementById('adminModal').classList.contains('show'))renderAdmin();
   return true;
 }
 async function loadLiveCatalog(forceOverwrite=false){
+  let {repo,token}=getGhConfig();
+  // 1) For Admin/Owner devices with a GitHub Token: read directly from GitHub Contents API (100% real-time, zero CDN cache delay!)
+  if(token){
+    try{
+      let apiRes=await fetch('https://api.github.com/repos/'+repo+'/contents/catalog.json?_t='+Date.now(),{
+        cache:'no-store',
+        headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'}
+      });
+      if(apiRes.ok){
+        let fileObj=await apiRes.json();
+        if(fileObj&&fileObj.content){
+          let data=JSON.parse(base64ToUtf8(fileObj.content));
+          return applyRemoteCatalog(data,forceOverwrite);
+        }
+      }
+    }catch(e){}
+  }
+  // 2) For Public Visitors (or fallback): fetch both domain & GitHub raw, pick whichever has the newest updatedAt!
   try{
-    let res=await fetch('catalog.json?t='+Date.now(),{cache:'no-store'});
-    if(!res.ok){
-      let {repo}=getGhConfig();
-      res=await fetch('https://raw.githubusercontent.com/'+repo+'/main/catalog.json?t='+Date.now(),{cache:'no-store'});
-    }
-    if(res.ok){
-      let data=await res.json();
-      return applyRemoteCatalog(data,forceOverwrite);
+    let candidates=await Promise.allSettled([
+      fetch('catalog.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null),
+      fetch('https://raw.githubusercontent.com/'+repo+'/main/catalog.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null)
+    ]);
+    let valid=candidates.map(c=>c.status==='fulfilled'?c.value:null).filter(Boolean);
+    if(valid.length){
+      valid.sort((a,b)=>(Date.parse(b.updatedAt||0)||0)-(Date.parse(a.updatedAt||0)||0));
+      return applyRemoteCatalog(valid[0],forceOverwrite);
     }
   }catch(e){}
   return false;
@@ -731,4 +760,4 @@ window.addEventListener('popstate',()=>{
   let shown=document.querySelectorAll('.modal-backdrop.show');
   if(shown.length)shown.forEach(m=>m.classList.remove('show'));
 });
-</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a6096d60f8f3232a',t:'MTc5NTcwMTcwOA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a6096d60f8f3232a',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
+</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a6097f225b885739',t:'MTc5NTcwMjQzNg=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a6097f225b885739',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
