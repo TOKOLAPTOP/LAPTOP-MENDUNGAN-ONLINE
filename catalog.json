@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T12:06:54.199Z",
+  "updatedAt": "2026-11-26T13:41:34.915Z",
   "products": [
     {
       "id": "p1795694759739",
@@ -20,16 +20,18 @@
     {
       "id": "p1",
       "brand": "Lenovo",
-      "name": "IdeaPad Slim 3",
-      "price": 6499000,
-      "discount": 8,
-      "category": "Kuliah",
+      "name": "Thinkpad t14 gen 2",
+      "price": 7750000,
+      "discount": 0,
+      "category": "Desain",
       "badge": "Cocok buat kuliah",
-      "specs": "Intel Core i5 Gen 12 · RAM 8GB · SSD 512GB · Layar 14 inci FHD",
-      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=82",
+      "specs": "Intel Core i7 Gen 11 · RAM 16GB · SSD 256GB · Layar 14 inci FHD",
       "images": [
-        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=82"
-      ]
+        "assets/uploads/laptop-p1-1-1795700489067-7zi1.jpg",
+        "assets/uploads/laptop-p1-2-1795700490890-37d6.jpg",
+        "assets/uploads/laptop-p1-3-1795700492519-pye4.jpg"
+      ],
+      "image": "assets/uploads/laptop-p1-1-1795700489067-7zi1.jpg"
     },
     {
       "id": "p2",
