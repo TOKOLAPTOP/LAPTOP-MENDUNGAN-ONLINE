@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-11-26T11:56:29.294Z",
+  "updatedAt": "2026-11-26T12:06:12.459Z",
   "products": [
+    {
+      "id": "p1795694759739",
+      "brand": "LENOVO",
+      "name": "THINKPAD L380",
+      "price": 4650000,
+      "discount": 0,
+      "category": "Desain",
+      "badge": "admin 1",
+      "specs": "LENOVO THINKPAD L380\n\nSPESIFIKASI : \n💠 PROCESSOR Core I5-8250U (8 CPUs) ~ 1.8GHz\n💠 RAM DDR4 16 GB\n💠 SSD NVME 256 GB\n💠 VGA INTEL UHD GRAPHIC\n💠 Display 14 inch FHD (1920 x 1080)\n💠 Warna Hitam\n💠 Bisa 180°\n💠 Bateray aman,  awet 2 jam lebih\n💠 Garansi Toko 1 Bulan\n💠 Kelengkapan Unit, Tas & Charger\n💠 Kondisi (Fisik standar, baterai awet, layar fhd bening, sound jernih, semua port normal)",
+      "images": [
+        "assets/uploads/laptop-p1795694759739-1-1795694764289-9yky.jpg",
+        "assets/uploads/laptop-p1795694759739-2-1795694767259-ooo9.jpg",
+        "assets/uploads/laptop-p1795694759739-3-1795694770076-pn71.jpg"
+      ],
+      "image": "assets/uploads/laptop-p1795694759739-1-1795694764289-9yky.jpg"
+    },
     {
       "id": "p1",
       "brand": "Lenovo",
