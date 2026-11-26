@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T13:42:08.820Z",
+  "updatedAt": "2026-11-26T13:49:55.369Z",
   "products": [
     {
       "id": "p1795694759739",
@@ -35,17 +35,19 @@
     },
     {
       "id": "p2",
-      "brand": "ASUS",
-      "name": "Vivobook 14",
-      "price": 7299000,
+      "brand": "LENOVO",
+      "name": "THINKPAD L480",
+      "price": 4250000,
       "discount": 0,
       "category": "Kuliah",
       "badge": "Ringan & praktis",
-      "specs": "Intel Core i5 · RAM 16GB · SSD 512GB · Layar 14 inci OLED",
-      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=900&q=82",
+      "specs": "SPESIFIKASI : \n💠 PROCESSOR Core I5-8250U (8 CPUs) ~ 1.8GHz\n💠 RAM DDR4 8 GB\n💠 SSD NVME 256 GB\n💠 VGA INTEL UHD GRAPHIC\n💠 Display 14 inch HD (1366 x 768)\n💠 Warna Hitam\n💠 Bisa 180°\n💠 Bateray aman,  awet 3 jam lebih\n💠 Garansi Toko 1 Bulan\n💠 Kelengkapan Unit, Tas & Charger\n💠 Kondisi (Fisik standar, baterai awet, layar hd bening, sound jernih, semua port normal)",
       "images": [
-        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=900&q=82"
-      ]
+        "assets/uploads/laptop-p2-1-1795700988371-lwig.jpg",
+        "assets/uploads/laptop-p2-2-1795700990802-6u1g.jpg",
+        "assets/uploads/laptop-p2-3-1795700992516-0esn.jpg"
+      ],
+      "image": "assets/uploads/laptop-p2-1-1795700988371-lwig.jpg"
     },
     {
       "id": "p3",
