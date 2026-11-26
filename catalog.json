@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T14:29:18.331Z",
+  "updatedAt": "2026-11-26T14:32:45.789Z",
   "products": [
     {
       "id": "p1795694759739",
@@ -83,17 +83,19 @@
     },
     {
       "id": "msi-katana-15",
-      "brand": "MSI",
-      "name": "Katana 15 B13VEK",
-      "price": 18619000,
+      "brand": "DELL",
+      "name": "LATITUDE 5490",
+      "price": 3950000,
       "discount": 0,
-      "category": "Gaming",
+      "category": "Kuliah",
       "badge": "Gaming · cek stok",
-      "specs": "Intel Core i7-13620H · NVIDIA GeForce RTX 4050 · RAM 16GB · SSD NVMe 1TB · Layar 15.6 inci FHD 144Hz",
-      "image": "assets/laptops/msi-katana-15.jpg",
+      "specs": "SPESIFIKASI : \n💠 PROCESSOR Core I5-8350U (8 CPUs) ~ 1.9GHz\n💠 RAM DDR4 8 GB\n💠 SSD NVMe 128 GB\n💠 VGA INTEL UHD GRAPHIC\n💠 Display 14 inch FHD (1920 x 1080)\n💠 Warna Hitam\n💠 Keyboard Backlight\n💠 Support Fingerprint\n💠 Bisa 180°\n💠 Bateray aman,  awet 2 jam lebih\n💠 Garansi Toko 1 Bulan\n💠 Kelengkapan Unit, Tas & Charger\n💠 Kondisi (Fisik standar, baterai awet, layar fhd bening, sound jernih, semua port normal)",
       "images": [
-        "assets/laptops/msi-katana-15.jpg"
-      ]
+        "assets/uploads/laptop-msi-katana-15-1-1795703559441-q09w.jpg",
+        "assets/uploads/laptop-msi-katana-15-2-1795703561902-y3rs.jpg",
+        "assets/uploads/laptop-msi-katana-15-3-1795703563492-ql4v.jpg"
+      ],
+      "image": "assets/uploads/laptop-msi-katana-15-1-1795703559441-q09w.jpg"
     },
     {
       "id": "hp-victus-15",
