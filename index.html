@@ -173,6 +173,48 @@ button,a,select,input{-webkit-tap-highlight-color:transparent;touch-action:manip
   .pwa-install-btn{display:none!important}
 }
 
+
+/* Compact Floating CS1 / CS2 Bubble Popover (z-index above all modals, phone numbers hidden) */
+#contactChooser.modal-backdrop{
+  z-index:45;
+  background:#0d14264d;
+  backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);
+  align-items:center!important;
+  justify-content:center!important;
+  padding:18px!important;
+}
+#contactChooser .cs-bubble-box{
+  width:auto;min-width:250px;max-width:310px;
+  background:#fff;
+  border-radius:999px;
+  padding:8px 10px;
+  box-shadow:0 18px 48px #0c142840,0 0 0 1px #ffffffcc;
+  display:flex;align-items:center;gap:8px;
+  animation:csBubblePop .18s cubic-bezier(.2,1.15,.4,1);
+}
+#contactChooser .cs-bubble-pill{
+  flex:1;
+  border:0;border-radius:999px;
+  padding:11px 16px;
+  color:#fff;text-decoration:none;
+  font-size:13px;font-weight:850;white-space:nowrap;
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  box-shadow:0 6px 16px #118b6036;
+  transition:transform .14s,filter .14s;
+}
+#contactChooser .cs-bubble-pill:hover{transform:translateY(-1px);filter:brightness(1.05)}
+#contactChooser .cs-bubble-pill:active{transform:scale(.95)}
+#cs1Link.cs-bubble-pill{background:linear-gradient(135deg,#22be7e,#118b60)}
+#cs2Link.cs-bubble-pill{background:linear-gradient(135deg,#ff6a3d,#ee4d2d);box-shadow:0 6px 16px #ee4d2d38}
+#contactChooser .cs-bubble-close{
+  width:32px;height:32px;flex:none;
+  border:0;border-radius:50%;
+  background:#f1f3f8;color:#5a6578;
+  font-size:17px;font-weight:700;
+  display:grid;place-items:center;
+}
+@keyframes csBubblePop{from{transform:scale(.82);opacity:0}to{transform:scale(1);opacity:1}}
+
 </style></head>
 <body>
 <div class="topline"><div class="wrap"><div class="ticker-window"><div class="ticker-track"><span class="ticker-item">📍 <strong>Layanan COD Solo Raya · Surakarta, Sukoharjo, Karanganyar, Boyolali, Sragen, Wonogiri, Klaten</strong> &nbsp; ✦ &nbsp; <strong>TOKO ONLINE · Tidak ada toko fisik · Konfirmasi COD ke CS/admin</strong></span><span class="ticker-item" aria-hidden="true">📍 <strong>Layanan COD Solo Raya · Surakarta, Sukoharjo, Karanganyar, Boyolali, Sragen, Wonogiri, Klaten</strong> &nbsp; ✦ &nbsp; <strong>TOKO ONLINE · Tidak ada toko fisik · Konfirmasi COD ke CS/admin</strong></span></div></div></div></div>
@@ -238,7 +280,7 @@ button,a,select,input{-webkit-tap-highlight-color:transparent;touch-action:manip
   </details>
 </div><div class="admin-toolbar"><span class="hint" id="productCount"></span><button class="btn smallbtn" id="addProduct">＋ Tambah laptop</button></div><div class="admin-list" id="adminList"></div><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><div class="admin-toolbar"><div><strong style="font-size:14px">Sponsor / listing UMKM</strong><div class="hint">Tambah, edit, atau hapus tampilan UMKM.</div></div><button class="btn smallbtn" id="addSponsor">＋ Tambah UMKM</button></div><div class="admin-list" id="sponsorAdminList"></div><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><div class="modal-head"><h3 style="font-size:15px">Pengaturan toko</h3></div><div class="form-grid"><div class="field"><label>Nomor WhatsApp CS 1 (kode negara, tanpa +)</label><input id="settingsPhone" inputmode="numeric" placeholder="Contoh: 6281234567890"></div><div class="field"><label>Nomor WhatsApp CS 2 (opsional)</label><input id="settingsPhone2" inputmode="numeric" placeholder="Contoh: 6281234567891"></div><div class="field"><label>Telegram admin (username tanpa @ atau nomor internasional)</label><input id="settingsTelegram" placeholder="Contoh: adminLaptop atau 6281234567890"></div><div class="field"><label>PIN admin baru</label><input id="settingsPin" type="password" placeholder="Kosongkan jika tidak diubah"></div></div><hr style="border:0;border-top:1px solid var(--line);margin:8px 0 16px"><div class="modal-head"><h3 style="font-size:15px">Tarif Kurir COD per Jarak (acuan Maxim Bike)</h3></div><div class="field"><label>Titik awal kurir untuk rute Google Maps</label><input id="courierOrigin" placeholder="Masukkan alamat titik berangkat kurir"></div><p class="hint">Jarak dimasukkan pelanggan dari rute Google Maps. Acuan harga publik yang ditemukan: dalam kota Rp8.000 termasuk 3,05 km + Rp2.100/km; antarkota Rp8.000 termasuk 2 km + Rp3.000/km. Tarif Maxim berbeda per wilayah dan dapat berubah; angka di bawah adalah setelan kurir toko, silakan sesuaikan. Lihat <a href="https://kumparan.com/jendela-dunia/tarif-maxim-per-km-terbaru-yang-wajib-diketahui-penumpang-21aXL6YNpjF" target="_blank" rel="noopener">referensi tarif</a>.</p><div class="form-grid"><div class="field"><label>Dalam kota · biaya dasar (Rp)</label><input id="tariffLocalBase" type="number" min="0" step="500"></div><div class="field"><label>Dalam kota · sudah termasuk (km)</label><input id="tariffLocalKm" type="number" min="0" step="0.05"></div><div class="field"><label>Dalam kota · per km tambahan (Rp)</label><input id="tariffLocalPerKm" type="number" min="0" step="100"></div><div class="field"><label>Antarkota · biaya dasar (Rp)</label><input id="tariffInterBase" type="number" min="0" step="500"></div><div class="field"><label>Antarkota · sudah termasuk (km)</label><input id="tariffInterKm" type="number" min="0" step="0.1"></div><div class="field"><label>Antarkota · per km tambahan (Rp)</label><input id="tariffInterPerKm" type="number" min="0" step="100"></div></div><p class="hint"><b>Klasifikasi rute per wilayah</b> (sesuaikan berdasarkan titik awal kurir).</p><div class="form-grid"><div class="field"><label>Surakarta</label><select id="typeSurakarta"><option value="local">Dalam kota</option><option value="intercity">Antarkota</option></select></div><div class="field"><label>Sukoharjo</label><select id="typeSukoharjo"><option value="local">Dalam kota</option><option value="intercity">Antarkota</option></select></div><div class="field"><label>Karanganyar</label><select id="typeKaranganyar"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div><div class="field"><label>Boyolali</label><select id="typeBoyolali"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div><div class="field"><label>Sragen</label><select id="typeSragen"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div><div class="field"><label>Wonogiri</label><select id="typeWonogiri"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div><div class="field"><label>Klaten</label><select id="typeKlaten"><option value="local">Dalam kota</option><option value="intercity" selected>Antarkota</option></select></div></div><div class="field"><label>Logo toko (URL atau unggah gambar)</label><input id="settingsLogo" type="url" placeholder="https://..."><input id="settingsLogoUpload" type="file" accept="image/*" style="margin-top:8px;font-size:12px"><p class="hint" id="logoHint">Pilih logo berbentuk kotak; tampil di header toko.</p></div><div class="field"><label>Pesan pembuka WhatsApp</label><input id="settingsMessage" placeholder="Halo, saya tertarik dengan laptop..."></div><p class="hint upload-hint">Data tersimpan di browser/perangkat ini (localStorage). Atur nomor WA CS 1/CS 2 dan username Telegram agar tombol kontak berfungsi. Logo unggahan juga tersimpan di browser ini; untuk sinkronisasi perangkat berbeda diperlukan backend.</p><div class="form-actions"><button class="btn" id="saveSettings">Simpan pengaturan</button></div></div></div>
 <div class="modal-backdrop" id="productModal"><div class="modal"><div class="modal-head"><h3 id="productModalTitle">Tambah laptop</h3><button class="xbtn" data-close="productModal">×</button></div><input id="editId" type="hidden"><div class="form-grid"><div class="field"><label>Merek</label><input id="pBrand" placeholder="Contoh: Lenovo"></div><div class="field"><label>Nama / seri laptop</label><input id="pName" placeholder="Contoh: ThinkPad X1 Carbon"></div></div><div class="form-grid"><div class="field"><label>Harga (rupiah)</label><input id="pPrice" type="number" min="0" placeholder="6500000"></div><div class="field"><label>Diskon (%)</label><input id="pDiscount" type="number" min="0" max="90" placeholder="0"></div></div><div class="form-grid"><div class="field"><label>Kategori</label><select id="pCategory"><option>Kuliah</option><option>Gaming</option><option>Desain</option></select></div><div class="field"><label>Label produk (opsional)</label><input id="pBadge" placeholder="Contoh: Pilihan admin"></div></div><div class="field"><label>Spesifikasi (pisahkan dengan koma)</label><textarea id="pSpecs" placeholder="Core i5 Gen 11, RAM 16GB, SSD 512GB"></textarea></div><div class="field"><label>Foto laptop — hingga 3 gambar per produk</label><input id="pImage" placeholder="URL foto utama (opsional)"><input id="pUpload" type="file" accept="image/*" multiple style="margin-top:8px;font-size:12px"><p class="hint" id="pImageHint">Pilih hingga 3 foto sekaligus. Foto akan dikompres dan disimpan lokal di browser ini.</p></div><div class="form-actions"><button class="btn secondary" data-close="productModal">Batal</button><button class="btn" id="saveProduct">Simpan produk</button></div></div></div>
-<div class="modal-backdrop" id="contactChooser"><div class="modal small"><div class="modal-head"><h3>Hubungi admin</h3><button class="xbtn" data-close="contactChooser">×</button></div><p class="hint">Pilih customer service yang ingin dihubungi.</p><div class="contact-options"><a class="btn contact-choice" id="cs1Link" href="#" target="_blank" rel="noopener">WhatsApp CS 1</a><a class="btn contact-choice" id="cs2Link" href="#" target="_blank" rel="noopener">WhatsApp CS 2</a></div></div></div>
+<div class="modal-backdrop" id="contactChooser"><div class="cs-bubble-box" role="dialog" aria-label="Pilih CS WhatsApp"><a class="cs-bubble-pill" id="cs1Link" href="#" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.93.56 3.73 1.53 5.25L2 22l5.01-1.62a9.84 9.84 0 0 0 5.03 1.37h.01c5.46 0 9.91-4.45 9.91-9.91A9.91 9.91 0 0 0 12.04 2Z"/></svg> CS 1</a><a class="cs-bubble-pill" id="cs2Link" href="#" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.93.56 3.73 1.53 5.25L2 22l5.01-1.62a9.84 9.84 0 0 0 5.03 1.37h.01c5.46 0 9.91-4.45 9.91-9.91A9.91 9.91 0 0 0 12.04 2Z"/></svg> CS 2</a><button type="button" class="cs-bubble-close" data-close="contactChooser" aria-label="Tutup">×</button></div></div>
 <div class="modal-backdrop" id="sponsorModal"><div class="modal small"><div class="modal-head"><h3 id="sponsorModalTitle">Tambah UMKM</h3><button class="xbtn" data-close="sponsorModal">×</button></div><input id="sponsorEditId" type="hidden"><div class="field"><label>Nama usaha</label><input id="sName" placeholder="Contoh: kedai kopi sekitar UMS"></div><div class="form-grid"><div class="field"><label>Kategori / area singkat</label><input id="sCategory" placeholder="Kuliner · Mendungan"></div><div class="field"><label>Ikon cadangan (opsional)</label><input id="sEmoji" placeholder="☕" maxlength="5"></div></div><div class="field"><label>Foto resto / UMKM (URL atau unggah foto asli)</label><input id="sImage" type="url" placeholder="https://..."><input id="sUpload" type="file" accept="image/*" style="margin-top:8px;font-size:12px"><p class="hint" id="sImageHint">Foto asli resto bisa diunggah atau ditambahkan lewat URL; foto disimpan lokal di browser ini.</p></div><div class="field"><label>Deskripsi singkat</label><textarea id="sDescription" placeholder="Jajanan, kopi, atau tempat nongkrong..."></textarea></div><div class="field"><label>Alamat / area</label><input id="sAddress" placeholder="Alamat singkat"></div><div class="field"><label>Link Google Maps, WhatsApp, atau Instagram</label><input id="sLink" type="url" placeholder="https://..."></div><p class="hint">Listing tampil sebagai contoh/rekomendasi kecil. Pastikan pemilik usaha menyetujui sebelum mempromosikannya sebagai sponsor.</p><div class="form-actions"><button class="btn secondary" data-close="sponsorModal">Batal</button><button class="btn" id="saveSponsor">Simpan UMKM</button></div></div></div>
 <div class="modal-backdrop" id="detailModal"><div class="modal small"><div class="modal-head"><h3 id="detailTitle"></h3><button class="xbtn" data-close="detailModal">×</button></div><div class="detail-gallery-wrap" id="detailGalleryWrap"><button type="button" class="gallery-nav prev" id="detailPrevBtn" aria-label="Foto sebelumnya">‹</button><img id="detailImage" style="width:100%;height:240px;object-fit:contain;display:block;background:#f0f2f7"><button type="button" class="gallery-nav next" id="detailNextBtn" aria-label="Foto berikutnya">›</button></div><div class="detail-thumbs" id="detailThumbs"></div><div id="detailInfo" style="padding:14px 0"></div><div class="detail-share-row"><button class="btn" id="detailWA" style="width:100%;background:#188b60"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.93.56 3.73 1.53 5.25L2 22l5.01-1.62a9.84 9.84 0 0 0 5.03 1.37h.01c5.46 0 9.91-4.45 9.91-9.91A9.91 9.91 0 0 0 12.04 2Z"/></svg> Tanya &amp; Beli via WA</button><button type="button" class="share-native-btn" id="detailShareBtn" title="Bagikan laptop ini">↗ Bagikan</button></div></div></div>
 <div class="toast" id="toast"></div>
@@ -270,7 +312,7 @@ let products=hasUnpublishedChanges?get('lmo_products',defaultProducts):defaultPr
 if(settings.pin&&settings.pin.length<8){delete settings.pin;localStorage.setItem('lmo_settings',JSON.stringify(settings))}
 if(!settings.logo||settings.logo==='assets/lm-logo-clean.png'||settings.logo==='assets/lm-logo-user.png'){settings.logo='assets/lm-logo-whitebg.png'}
 const rupiah=n=>'Rp '+Number(n||0).toLocaleString('id-ID');const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function markDirty(dirty=true){hasUnpublishedChanges=dirty;localStorage.setItem('lmo_dirty',dirty?'1':'0');updateSyncBanner()}function saveProducts(){localStorage.setItem('lmo_products',JSON.stringify(products));markDirty(true)}function toast(t){let x=document.getElementById('toast');x.textContent=t;x.classList.add('on');setTimeout(()=>x.classList.remove('on'),2600)}function waUrl(text,phone=settings.phone){if(!phone)return '#';return 'https://wa.me/'+phone.replace(/\D/g,'')+'?text='+encodeURIComponent(text)}function openWhatsApp(text){let phones=[settings.phone,settings.phone2].filter(Boolean);if(!phones.length){toast('Nomor WhatsApp CS belum diatur di panel admin.');return}if(phones.length===1){window.open(waUrl(text,phones[0]),'_blank','noopener');return}let cs1=document.getElementById('cs1Link'),cs2=document.getElementById('cs2Link');cs1.href=waUrl(text,settings.phone);cs2.href=waUrl(text,settings.phone2);cs1.textContent='WhatsApp CS 1 ('+settings.phone+')';cs2.textContent='WhatsApp CS 2 ('+settings.phone2+')';document.getElementById('cs1Link').onclick=()=>closeModal('contactChooser');document.getElementById('cs2Link').onclick=()=>closeModal('contactChooser');openModal('contactChooser')}const defaultBrandMarkup=document.querySelector('.brand-icon').innerHTML;function updateStoreLogo(){let box=document.querySelector('.brand-icon');if(!box)return;if(settings.logo){box.innerHTML=`<img src="${esc(settings.logo)}" alt="Logo toko">`}else box.innerHTML=defaultBrandMarkup}function updateLinks(){let msg=settings.message||'Halo, saya ingin tanya tentang laptop.';['navWA','heroWA','floatWA'].forEach(id=>{let el=document.getElementById(id);el.href=waUrl(msg+' di Laptop Mendungan Online.');el.onclick=e=>{e.preventDefault();openWhatsApp(msg+' di Laptop Mendungan Online.')}});let tg=document.getElementById('telegramFloat');if(tg){let tgValue=(settings.telegram||'').trim().replace(/^@/,'');tg.href=tgValue?( /^\+?\d{7,}$/.test(tgValue)?'https://t.me/+'+tgValue.replace(/\D/g,''):'https://t.me/'+tgValue):'#';tg.onclick=e=>{if(!tgValue){e.preventDefault();toast('Username atau nomor Telegram admin belum diatur.')}}}let cs2=document.getElementById('floatWA2');if(cs2){cs2.href=settings.phone2?waUrl(msg+' di Laptop Mendungan Online.',settings.phone2):'#';cs2.onclick=e=>{if(!settings.phone2){e.preventDefault();toast('Atur nomor WhatsApp CS 2 di panel admin.')}}}updateStoreLogo()}
+function markDirty(dirty=true){hasUnpublishedChanges=dirty;localStorage.setItem('lmo_dirty',dirty?'1':'0');updateSyncBanner()}function saveProducts(){localStorage.setItem('lmo_products',JSON.stringify(products));markDirty(true)}function toast(t){let x=document.getElementById('toast');x.textContent=t;x.classList.add('on');setTimeout(()=>x.classList.remove('on'),2600)}function waUrl(text,phone=settings.phone){if(!phone)return '#';return 'https://wa.me/'+phone.replace(/\D/g,'')+'?text='+encodeURIComponent(text)}function openWhatsApp(text){let phones=[settings.phone,settings.phone2].filter(Boolean);if(!phones.length){toast('Nomor WhatsApp CS belum diatur di panel admin.');return}if(phones.length===1){window.open(waUrl(text,phones[0]),'_blank','noopener');return}let cs1=document.getElementById('cs1Link'),cs2=document.getElementById('cs2Link');cs1.href=waUrl(text,settings.phone);cs2.href=waUrl(text,settings.phone2);document.getElementById('cs1Link').onclick=()=>closeModal('contactChooser');document.getElementById('cs2Link').onclick=()=>closeModal('contactChooser');openModal('contactChooser')}const defaultBrandMarkup=document.querySelector('.brand-icon').innerHTML;function updateStoreLogo(){let box=document.querySelector('.brand-icon');if(!box)return;if(settings.logo){box.innerHTML=`<img src="${esc(settings.logo)}" alt="Logo toko">`}else box.innerHTML=defaultBrandMarkup}function updateLinks(){let msg=settings.message||'Halo, saya ingin tanya tentang laptop.';['navWA','heroWA','floatWA'].forEach(id=>{let el=document.getElementById(id);el.href=waUrl(msg+' di Laptop Mendungan Online.');el.onclick=e=>{e.preventDefault();openWhatsApp(msg+' di Laptop Mendungan Online.')}});let tg=document.getElementById('telegramFloat');if(tg){let tgValue=(settings.telegram||'').trim().replace(/^@/,'');tg.href=tgValue?( /^\+?\d{7,}$/.test(tgValue)?'https://t.me/+'+tgValue.replace(/\D/g,''):'https://t.me/'+tgValue):'#';tg.onclick=e=>{if(!tgValue){e.preventDefault();toast('Username atau nomor Telegram admin belum diatur.')}}}let cs2=document.getElementById('floatWA2');if(cs2){cs2.href=settings.phone2?waUrl(msg+' di Laptop Mendungan Online.',settings.phone2):'#';cs2.onclick=e=>{if(!settings.phone2){e.preventDefault();toast('Atur nomor WhatsApp CS 2 di panel admin.')}}}updateStoreLogo()}
 const waSvg='<svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.93.56 3.73 1.53 5.25L2 22l5.01-1.62a9.84 9.84 0 0 0 5.03 1.37h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.85 9.85 0 0 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-2.97.96.97-2.89-.2-.3a8.17 8.17 0 0 1-1.26-4.35c0-4.52 3.68-8.2 8.21-8.2 2.19 0 4.25.85 5.8 2.4a8.16 8.16 0 0 1 2.4 5.8c0 4.52-3.68 8.2-8.2 8.2Zm4.5-6.14c-.25-.13-1.48-.73-1.7-.82-.23-.08-.39-.12-.55.13-.16.24-.63.82-.77.99-.14.16-.28.18-.53.06-.25-.13-1.06-.39-2.02-1.24-.75-.66-1.25-1.48-1.4-1.73-.15-.24-.02-.38.11-.5.12-.11.25-.29.37-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2.02 0 1.19.86 2.35.98 2.51.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.19 1.1.16 1.51.1.46-.07 1.48-.6 1.69-1.17.21-.58.21-1.07.15-1.17-.06-.1-.22-.16-.47-.28Z"/></svg>';
 const tgSvg='<svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.91 4.57 20.4 20.7c-.27 1.14-.94 1.42-1.9.88l-5.26-3.88-2.54 2.45c-.28.29-.52.53-1.07.53l.38-5.36L19.78 6.8c.42-.37-.09-.57-.65-.2L7.01 14.34 1.8 12.71c-1.13-.35-1.15-1.13.24-1.67L22.4 3.17c.96-.35 1.8.24 1.51 1.4Z"/></svg>';
 function saveSponsors(){localStorage.setItem('lmo_sponsors',JSON.stringify(sponsors));markDirty(true)}
@@ -450,14 +492,42 @@ async function loadLiveCatalog(forceOverwrite=false){
 }
 async function ghApi(path,options={}){
   let {repo,token}=getGhConfig();
-  if(!token)throw new Error('Isi Token GitHub terlebih dahulu di bagian Pengaturan Koneksi GitHub.');
-  let res=await fetch('https://api.github.com/repos/'+repo+'/contents/'+path,{
-    ...options,
-    headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json',...(options.headers||{})}
-  });
+  if(!token)throw new Error('Token GitHub kosong. Buka Pengaturan Koneksi GitHub lalu simpan token.');
+  let method=(options.method||'GET').toUpperCase();
+  let sep=path.includes('?')?'&':'?';
+  let url='https://api.github.com/repos/'+repo+'/contents/'+path+(method==='GET'?sep+'_t='+Date.now():'');
+  let headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json',...(options.headers||{})};
+  if(options.body)headers['Content-Type']='application/json';
+  let res=await fetch(url,{...options,method,cache:'no-store',headers});
   let json=await res.json().catch(()=>({}));
-  if(!res.ok)throw new Error(json.message||('GitHub error '+res.status));
+  if(!res.ok){
+    let err=new Error(json.message||('GitHub HTTP '+res.status));
+    err.status=res.status;
+    throw err;
+  }
   return json;
+}
+async function getFreshFileSha(filepath){
+  let {repo,token}=getGhConfig();
+  try{
+    let cur=await ghApi(filepath,{method:'GET'});
+    if(cur&&cur.sha)return cur.sha;
+  }catch(e){
+    if(e.status===404)return null;
+  }
+  // Fallback: list root directory contents to get exact SHA even if single-file endpoint was cached
+  try{
+    let res=await fetch('https://api.github.com/repos/'+repo+'/contents/?_t='+Date.now(),{
+      cache:'no-store',
+      headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'}
+    });
+    if(res.ok){
+      let list=await res.json();
+      let found=Array.isArray(list)&&list.find(x=>x.path===filepath||x.name===filepath);
+      if(found&&found.sha)return found.sha;
+    }
+  }catch(e){}
+  return null;
 }
 async function uploadDataUriIfNeeded(src,prefix){
   if(!src||!src.startsWith('data:image/'))return src;
@@ -469,12 +539,16 @@ async function uploadDataUriIfNeeded(src,prefix){
   return filename;
 }
 function utf8ToBase64(str){
-  let bytes=new TextEncoder().encode(str),bin='';
-  for(let i=0;i<bytes.length;i++)bin+=String.fromCharCode(bytes[i]);
-  return btoa(bin);
+  let bytes=new TextEncoder().encode(str),chunks=[];
+  for(let i=0;i<bytes.length;i+=0x8000){
+    chunks.push(String.fromCharCode.apply(null,bytes.subarray(i,i+0x8000)));
+  }
+  return btoa(chunks.join(''));
 }
+let isPublishingNow=false;
 async function publishCatalogToGithub(){
-  let btn=document.getElementById('publishToGithubBtn');
+  if(isPublishingNow)return;
+  let btn=document.getElementById('publishToGithubBtn'),statusEl=document.getElementById('syncStatusText');
   let {token}=getGhConfig();
   if(!token){
     document.getElementById('ghSetupDetails').open=true;
@@ -483,6 +557,7 @@ async function publishCatalogToGithub(){
     return;
   }
   if(document.getElementById('adminModal').classList.contains('show'))syncFormInputsToSettings();
+  isPublishingNow=true;
   let origText=btn.textContent;
   btn.disabled=true;
   try{
@@ -499,16 +574,30 @@ async function publishCatalogToGithub(){
     }
     if(settings.logo)settings.logo=await uploadDataUriIfNeeded(settings.logo,'logo');
 
-    btn.textContent='⏳ Menyimpan katalog ke server...';
+    btn.textContent='⏳ Menyimpan ke GitHub...';
     let publicSettings={...settings};
     delete publicSettings.pin;
     let payload={updatedAt:new Date().toISOString(),products,sponsors,settings:publicSettings};
     let contentB64=utf8ToBase64(JSON.stringify(payload,null,2));
-    let existingSha=null;
-    try{let cur=await ghApi('catalog.json');existingSha=cur.sha}catch(e){}
-    let body={message:'Update katalog toko via Panel Admin',content:contentB64};
-    if(existingSha)body.sha=existingSha;
-    await ghApi('catalog.json',{method:'PUT',body:JSON.stringify(body)});
+
+    // Attempt PUT with fresh SHA, and auto-retry once if GitHub reports SHA conflict (409 or 422)
+    let savedOk=false,lastErr=null;
+    for(let attempt=1;attempt<=2&&!savedOk;attempt++){
+      try{
+        let existingSha=await getFreshFileSha('catalog.json');
+        let body={message:'Update katalog toko via Panel Admin',content:contentB64};
+        if(existingSha)body.sha=existingSha;
+        await ghApi('catalog.json',{method:'PUT',body:JSON.stringify(body)});
+        savedOk=true;
+      }catch(e){
+        lastErr=e;
+        if(attempt===1&&(e.status===409||e.status===422)){
+          await new Promise(r=>setTimeout(r,600));
+          continue;
+        }
+        throw e;
+      }
+    }
 
     localStorage.setItem('lmo_products',JSON.stringify(products));
     localStorage.setItem('lmo_sponsors',JSON.stringify(sponsors));
@@ -516,10 +605,21 @@ async function publishCatalogToGithub(){
     localStorage.setItem('lmo_last_published_ts',String(Date.now()));
     markDirty(false);
     renderProducts();renderSponsors();renderAdmin();updateLinks();
-    toast('Berhasil diterbitkan! Tunggu ±30–60 detik hingga tampil di semua perangkat.');
+    if(statusEl)statusEl.innerHTML='<b style="color:#12845d">✅ Berhasil diterbitkan pada '+new Date().toLocaleTimeString('id-ID')+'!</b> Perubahan aktif di semua perangkat dalam ±30 detik.';
+    toast('✅ Berhasil diterbitkan ke website!');
   }catch(err){
-    toast('Gagal menerbitkan: '+(err.message||'Periksa Token GitHub Anda.'));
+    let msg=err.message||'Periksa koneksi atau Token GitHub Anda.';
+    if(err.status===401){
+      msg='Token GitHub sudah kedaluwarsa / terhapus (GitHub otomatis menghapus token jika sempat bocor). Buat token baru di Pengaturan Koneksi GitHub di bawah!';
+      document.getElementById('ghSetupDetails').open=true;
+    }else if(err.status===403){
+      msg='Token GitHub tidak punya izin tulis (pastikan centang kotak "repo" saat membuat token).';
+      document.getElementById('ghSetupDetails').open=true;
+    }
+    if(statusEl)statusEl.innerHTML='<b style="color:#c54b3e">❌ Gagal menerbitkan: '+esc(msg)+'</b>';
+    toast('Gagal menerbitkan: '+msg);
   }finally{
+    isPublishingNow=false;
     btn.disabled=false;
     btn.textContent=origText;
   }
@@ -631,4 +731,4 @@ window.addEventListener('popstate',()=>{
   let shown=document.querySelectorAll('.modal-backdrop.show');
   if(shown.length)shown.forEach(m=>m.classList.remove('show'));
 });
-</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a609302059a8ecd9',t:'MTc5NTY5OTIwMA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a609302059a8ecd9',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
+</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a6096d60f8f3232a',t:'MTc5NTcwMTcwOA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a6096d60f8f3232a',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

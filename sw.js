@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lm-online-v2';
+const CACHE_NAME = 'lm-online-v4';
 const CORE_ASSETS = [
   '/',
   '/index.html',
@@ -26,11 +26,14 @@ self.addEventListener('fetch', event => {
   const req = event.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
-  // Always network-first for live catalog & GitHub API
-  if (url.pathname.endsWith('catalog.json') || url.hostname.includes('github')) {
+  // NEVER intercept external APIs (e.g. api.github.com) — let browser talk directly!
+  if (url.origin !== self.location.origin) return;
+
+  // Always network-first with cache:'no-store' for catalog.json
+  if (url.pathname.endsWith('catalog.json')) {
     event.respondWith(
-      fetch(req).then(res => {
-        if (url.pathname.endsWith('catalog.json') && res.ok) {
+      fetch(req, { cache: 'no-store' }).then(res => {
+        if (res.ok) {
           const clone = res.clone();
           caches.open(CACHE_NAME).then(c => c.put(req, clone));
         }
@@ -39,10 +42,11 @@ self.addEventListener('fetch', event => {
     );
     return;
   }
-  // Network-first for HTML, Stale-while-revalidate for images/assets
+
+  // Network-first for HTML pages
   if (req.mode === 'navigate' || (req.headers.get('accept') || '').includes('text/html')) {
     event.respondWith(
-      fetch(req).then(res => {
+      fetch(req, { cache: 'no-cache' }).then(res => {
         const clone = res.clone();
         caches.open(CACHE_NAME).then(c => c.put(req, clone));
         return res;
@@ -50,10 +54,12 @@ self.addEventListener('fetch', event => {
     );
     return;
   }
+
+  // Stale-while-revalidate for local static assets
   event.respondWith(
     caches.match(req).then(cached => {
       const networkFetch = fetch(req).then(res => {
-        if (res && res.status === 200 && url.origin === self.location.origin) {
+        if (res && res.status === 200) {
           const clone = res.clone();
           caches.open(CACHE_NAME).then(c => c.put(req, clone));
         }
