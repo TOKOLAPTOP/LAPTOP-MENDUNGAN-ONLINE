@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T14:04:40.237Z",
+  "updatedAt": "2026-11-26T14:29:18.331Z",
   "products": [
     {
       "id": "p1795694759739",
@@ -67,17 +67,19 @@
     },
     {
       "id": "rog-strix-g16",
-      "brand": "ASUS ROG",
-      "name": "Strix G16 G614JU",
-      "price": 19999000,
+      "brand": "HP (HewlettPackard)",
+      "name": "ELITEBOOK 830 G8",
+      "price": 7650000,
       "discount": 0,
-      "category": "Gaming",
+      "category": "Desain",
       "badge": "Gaming · cek stok",
-      "specs": "Intel Core i5-13450HX · NVIDIA GeForce RTX 4050 6GB · RAM 16GB · SSD 512GB · Layar 16 inci FHD+ 165Hz",
-      "image": "assets/laptops/asus-rog-strix-g16.jpg",
+      "specs": "SPESIFIKASI : \n💠 PROCESSOR Core I7-1185G7 (8 CPUs) ~ 3.0GHz\n💠 RAM DDR4 16 GB\n💠 SSD NVMe 256 GB\n💠 VGA INTEL IRIS Xe GRAPHIC\n💠 Display 13,3 inch FHD (1920 x 1080)\n💠 Warna Silver\n💠 Keyboard Backlight\n💠 Support Fingerprint\n💠 Bateray aman,  awet 3 jam lebih\n💠 Garansi Toko 1 Bulan\n💠 Kelengkapan Unit, Tas & Charger\n💠 Kondisi (Fisik standar, baterai awet, layar fhd bening, sound jernih, semua port normal)",
       "images": [
-        "assets/laptops/asus-rog-strix-g16.jpg"
-      ]
+        "assets/uploads/laptop-rog-strix-g16-1-1795703351147-c90u.jpg",
+        "assets/uploads/laptop-rog-strix-g16-2-1795703353655-urwt.jpg",
+        "assets/uploads/laptop-rog-strix-g16-3-1795703355836-jt6q.jpg"
+      ],
+      "image": "assets/uploads/laptop-rog-strix-g16-1-1795703351147-c90u.jpg"
     },
     {
       "id": "msi-katana-15",
