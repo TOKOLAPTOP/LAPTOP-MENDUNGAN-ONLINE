@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T12:06:12.459Z",
+  "updatedAt": "2026-11-26T12:06:54.199Z",
   "products": [
     {
       "id": "p1795694759739",
@@ -214,6 +214,27 @@
     "telegram": "6285165437950",
     "courierOrigin": "Mendungan UMS",
     "logo": "assets/lm-logo-whitebg.png",
-    "message": "Halo, saya tertarik dengan"
+    "message": "Halo, saya tertarik dengan",
+    "deliveryPricing": {
+      "local": {
+        "base": 8000,
+        "includedKm": 3.05,
+        "perKm": 2100
+      },
+      "intercity": {
+        "base": 8000,
+        "includedKm": 2,
+        "perKm": 3000
+      }
+    },
+    "deliveryTypes": {
+      "surakarta": "local",
+      "sukoharjo": "local",
+      "karanganyar": "intercity",
+      "boyolali": "intercity",
+      "sragen": "intercity",
+      "wonogiri": "intercity",
+      "klaten": "intercity"
+    }
   }
 }
