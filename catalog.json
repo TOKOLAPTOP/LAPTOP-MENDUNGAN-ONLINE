@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T13:49:55.369Z",
+  "updatedAt": "2026-11-26T14:04:18.691Z",
   "products": [
     {
       "id": "p1795694759739",
@@ -51,17 +51,19 @@
     },
     {
       "id": "p3",
-      "brand": "Acer",
-      "name": "Nitro V 15",
-      "price": 12999000,
-      "discount": 5,
+      "brand": "LENOVO",
+      "name": "THINKPAD L490",
+      "price": 4950000,
+      "discount": 0,
       "category": "Gaming",
       "badge": "Siap nge-game",
-      "specs": "Intel Core i5 H-series · RAM 16GB · SSD 512GB · GeForce RTX 4050",
-      "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=900&q=82",
+      "specs": "SPESIFIKASI : \n💠 PROCESSOR Core I5-8365U (8 CPUs) ~ 1.9GHz\n💠 RAM DDR4 16 GB\n💠 SSD NVMe 256 GB\n💠 VGA INTEL UHD GRAPHIC\n💠 Display 14 inch HD (1366 x 768)\n💠 Warna Hitam\n💠 Bisa 180°\n💠 Bateray aman,  awet 2 jam lebih\n💠 Garansi Toko 1 Bulan\n💠 Kelengkapan Unit, Tas & Charger\n💠 Kondisi (Fisik standar, baterai awet, layar hd bening, sound jernih, semua port normal)",
       "images": [
-        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=900&q=82"
-      ]
+        "assets/uploads/laptop-p3-1-1795701852498-1yrt.jpg",
+        "assets/uploads/laptop-p3-2-1795701854848-ms1c.jpg",
+        "assets/uploads/laptop-p3-3-1795701856489-4a2t.jpg"
+      ],
+      "image": "assets/uploads/laptop-p3-1-1795701852498-1yrt.jpg"
     },
     {
       "id": "rog-strix-g16",
