@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T15:13:55.328Z",
+  "updatedAt": "2026-11-26T18:46:40.837Z",
   "products": [
     {
       "id": "p1795694759739",
@@ -113,17 +113,17 @@
     },
     {
       "id": "p4",
-      "brand": "HP",
-      "name": "Pavilion Aero 13",
-      "price": 8999000,
+      "brand": "Asus",
+      "name": "X1404VA-I712512",
+      "price": 13750000,
       "discount": 0,
       "category": "Desain",
       "badge": "Tipis & ringan",
-      "specs": "AMD Ryzen 7 · RAM 16GB · SSD 512GB · Layar 13.3 inci WUXGA",
-      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=82",
+      "specs": "Intel®️ Core™️ i7-1355U / 12GB DDR4 /  512GB NVME SSD/ Layar 14\" FHD /WIN 11 HOME/ Webcam / 1 Port USB 2.0/ 2 Port USB 3.2/ 1 Port USB Type C/ HDMI/quiet blue",
       "images": [
-        "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=82"
-      ]
+        "assets/uploads/laptop-p4-1-1795718798288-4f5r.jpg"
+      ],
+      "image": "assets/uploads/laptop-p4-1-1795718798288-4f5r.jpg"
     },
     {
       "id": "p5",
