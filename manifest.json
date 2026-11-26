@@ -1,0 +1,26 @@
+{
+  "name": "Laptop Mendungan Online",
+  "short_name": "Laptop Mendungan",
+  "description": "Toko Laptop Online & Layanan COD Solo Raya — Pilihan Cerdas, Hati Tenang.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f5f5f5",
+  "theme_color": "#ee4d2d",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "assets/lm-logo-whitebg.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/lm-logo-whitebg.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
