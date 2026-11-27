@@ -1,6 +1,21 @@
 {
-  "updatedAt": "2026-11-27T03:15:51.097Z",
+  "updatedAt": "2026-11-27T03:35:47.898Z",
   "products": [
+    {
+      "id": "p1795750540778",
+      "brand": "HP",
+      "name": "Elitebook 830 g5",
+      "price": 4850000,
+      "discount": 0,
+      "category": "Kuliah",
+      "badge": "",
+      "specs": "cORE I5 GEN 8-RAM DDR4 8GB-SSD 256GB-VIEW 14\"-FULL SET",
+      "images": [
+        "assets/uploads/laptop-p1795750540778-1-1795750543661-u0ef.jpg",
+        "assets/uploads/laptop-p1795750540778-2-1795750545774-nnlj.jpg"
+      ],
+      "image": "assets/uploads/laptop-p1795750540778-1-1795750543661-u0ef.jpg"
+    },
     {
       "id": "p1795748937869",
       "brand": "DELL",
