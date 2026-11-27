@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T03:09:05.891Z",
+  "updatedAt": "2026-11-27T03:15:51.097Z",
   "products": [
     {
       "id": "p1795748937869",
@@ -167,7 +167,9 @@
       "badge": "Desain",
       "specs": "Intel®️ Core™️ i5-1135G7\n16 GB DDR4\n256 GB SSD NVME\nVGA INTEL IRIS\nLayar 13.3\" FHD \nWindows 11 Professional \nBT,Webcam,MicroSD card reader, 2 Port 3.1,2 Port 3.1 Type C ,HDMI,Port Ethernet RJ45\nBLACK,  berat laptop 856 gram",
       "images": [
-        "assets/uploads/laptop-p6-1-1795719107701-czaa.jpg"
+        "assets/uploads/laptop-p6-1-1795719107701-czaa.jpg",
+        "assets/uploads/laptop-p6-2-1795749346769-w2du.jpg",
+        "assets/uploads/laptop-p6-3-1795749348937-inqt.jpg"
       ],
       "image": "assets/uploads/laptop-p6-1-1795719107701-czaa.jpg"
     },
