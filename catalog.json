@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-11-27T06:40:44.423Z",
+  "updatedAt": "2026-11-27T07:40:08.544Z",
   "products": [
+    {
+      "id": "p1795765199329",
+      "brand": "LENOVO",
+      "name": "LOQ 15ARP9",
+      "price": 18350000,
+      "discount": 0,
+      "category": "Gaming",
+      "badge": "",
+      "specs": "* Processor AMD Ryzen 7 7435HS (8C/16T 4.5GHz)\n* Display 15.6″ IPS FHD (1920x1080) 144Hz, 100% sRGB\n* RAM 12GB DDR5 4800MHz (upgradeable)\n* Storage 512GB SSD NVMe 4.0\n* Graphics NVIDIA GeForce RTX 4050 with 6GB GDDR6\n* Keyboard Backlit White\n* Wireless Wi-Fi 6, Bluetooth 5.2\n* Port 3x USB-A, 1x USB-C, HDMI 2.1, RJ-45 (Ethernet), Audio jack\n* Kamera 720p HD with E-shutter\n* OS Windows 11 Home x64",
+      "images": [
+        "assets/uploads/laptop-p1795765199329-1-1795765201897-cr2z.jpg",
+        "assets/uploads/laptop-p1795765199329-2-1795765204243-x6kh.jpg",
+        "assets/uploads/laptop-p1795765199329-3-1795765206517-jig1.jpg"
+      ],
+      "image": "assets/uploads/laptop-p1795765199329-1-1795765201897-cr2z.jpg"
+    },
     {
       "id": "p1795761595991",
       "brand": "ACER",
