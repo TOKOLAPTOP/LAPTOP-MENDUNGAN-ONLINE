@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-11-27T05:31:58.599Z",
+  "updatedAt": "2026-11-27T05:35:22.966Z",
   "products": [
+    {
+      "id": "p1795757713523",
+      "brand": "LENOVO",
+      "name": "IDEAPAD 1 14IGL05",
+      "price": 3450000,
+      "discount": 0,
+      "category": "Kuliah",
+      "badge": "",
+      "specs": "SPESIFIKASI : \n💠 PROCESSOR Celeron N4020 (2 CPUs) ~ 1.1GHz\n💠 RAM DDR4 8 GB\n💠 SSD NVMe 512 GB\n💠 VGA INTEL UHD GRAPHIC\n💠 Display 14 inch HD (1366 x 768)\n💠 Warna Gold\n💠 Bateray aman,  awet 2 jam lebih\n💠 Garansi Toko 1 Bulan\n💠 Kelengkapan Unit, Tas & Charger\n💠 Kondisi (Fisik standar, baterai awet, layar hd bening, sound jernih, semua port normal)",
+      "images": [
+        "assets/uploads/laptop-p1795757713523-1-1795757716685-5s8z.jpg",
+        "assets/uploads/laptop-p1795757713523-2-1795757718467-1cq5.jpg",
+        "assets/uploads/laptop-p1795757713523-3-1795757720702-kyc7.jpg"
+      ],
+      "image": "assets/uploads/laptop-p1795757713523-1-1795757716685-5s8z.jpg"
+    },
     {
       "id": "p1795757283530",
       "brand": "ASUS",
