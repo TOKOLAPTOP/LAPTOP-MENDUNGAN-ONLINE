@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lm-online-v8';
+const CACHE_NAME = 'lm-online-v12';
 const CORE_ASSETS = [
   '/',
   '/index.html',
