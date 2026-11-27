@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-11-27T02:48:30.416Z",
+  "updatedAt": "2026-11-27T03:09:05.891Z",
   "products": [
+    {
+      "id": "p1795748937869",
+      "brand": "DELL",
+      "name": "Latitude 3410",
+      "price": 6950000,
+      "discount": 0,
+      "category": "Kuliah",
+      "badge": "",
+      "specs": "Intel®️ Core™️ i5-10210U/ 8GB DDR4 / 256 GB SSD NVME / Layar 14,0\" HD / Windows 11 Pro 64-bit/ Webcam / Card reader / 2 Port USB 3.2 / 1 Port USB 2.0 / 1 Port USB 3.2 Type C / HDMI  / Port LAN / BLACK",
+      "images": [
+        "assets/uploads/laptop-p1795748937869-1-1795748940980-ti1u.jpg",
+        "assets/uploads/laptop-p1795748937869-2-1795748943093-8yz5.jpg",
+        "assets/uploads/laptop-p1795748937869-3-1795748944584-zllv.jpg"
+      ],
+      "image": "assets/uploads/laptop-p1795748937869-1-1795748940980-ti1u.jpg"
+    },
     {
       "id": "p1795694759739",
       "brand": "LENOVO",
