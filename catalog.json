@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-11-27T05:49:20.292Z",
+  "updatedAt": "2026-11-27T05:53:15.941Z",
   "products": [
+    {
+      "id": "p1795758786209",
+      "brand": "ASUS",
+      "name": "A507MA",
+      "price": 1950000,
+      "discount": 0,
+      "category": "Kuliah",
+      "badge": "",
+      "specs": "SPESIFIKASI : \n💠 PROCESSOR Celeron N4000 (2 CPUs) ~ 1.1GHz\n💠 RAM DDR4 4 GB\n💠 HDD 500 GB\n💠 VGA INTEL UHD GRAPHIC \n💠 Display 15,6 inch HD (1366 x 768)\n💠 Warna Silver\n💠 Support Fingerprint \n💠 Bateray aman,  awet 2 jam lebih\n💠 Garansi Toko 1 Bulan\n💠 Kelengkapan Unit, Tas & Charger\n💠 Kondisi (Fisik standar, baterai awet, layar hd bening, sound jernih, semua port normal)",
+      "images": [
+        "assets/uploads/laptop-p1795758786209-1-1795758788737-scaj.jpg",
+        "assets/uploads/laptop-p1795758786209-2-1795758791133-lsu1.jpg",
+        "assets/uploads/laptop-p1795758786209-3-1795758793536-gkd7.jpg"
+      ],
+      "image": "assets/uploads/laptop-p1795758786209-1-1795758788737-scaj.jpg"
+    },
     {
       "id": "p1795758550114",
       "brand": "DELL",
