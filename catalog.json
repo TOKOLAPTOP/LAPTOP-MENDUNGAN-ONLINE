@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T18:59:32.771Z",
+  "updatedAt": "2026-11-27T02:38:55.499Z",
   "products": [
     {
       "id": "p1795694759739",
@@ -157,15 +157,15 @@
       "id": "t14s-g2",
       "brand": "Lenovo",
       "name": "ThinkPad T14s Gen 2",
-      "price": 6850000,
+      "price": 5850000,
       "discount": 0,
       "category": "Kuliah",
       "badge": "Touchscreen · Full set",
       "specs": "Core i5 Gen 11 · RAM 8GB DDR4 · SSD NVMe 256GB · Keyboard backlit · LED 14 inci FHD touchscreen · Fisik mulus, second normal · Full set · Garansi 1 bulan",
-      "image": "assets/laptops/thinkpad-t14s-gen2.jpg",
       "images": [
         "assets/laptops/thinkpad-t14s-gen2.jpg"
-      ]
+      ],
+      "image": "assets/laptops/thinkpad-t14s-gen2.jpg"
     },
     {
       "id": "x390",
