@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T10:41:00.598Z",
+  "updatedAt": "2026-11-27T18:49:35.721Z",
   "products": [
     {
       "id": "p1795776051287",
@@ -430,8 +430,8 @@
     }
   ],
   "settings": {
-    "phone": "6281392399300",
-    "phone2": "6283150768681",
+    "phone": "6283150768681",
+    "phone2": "6281392399300",
     "telegram": "6285165437950",
     "courierOrigin": "Mendungan UMS",
     "logo": "assets/lm-logo-whitebg.png",
