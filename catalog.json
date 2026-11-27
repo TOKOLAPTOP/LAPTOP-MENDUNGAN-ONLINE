@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-11-27T05:53:15.941Z",
+  "updatedAt": "2026-11-27T05:56:35.768Z",
   "products": [
+    {
+      "id": "p1795758985211",
+      "brand": "LENOVO",
+      "name": "THINKPAD L380",
+      "price": 4550000,
+      "discount": 0,
+      "category": "Kuliah",
+      "badge": "",
+      "specs": "SPESIFIKASI : \n💠 PROCESSOR Core I5-8250U (8 CPUs) ~ 1.8GHz\n💠 RAM DDR4 16 GB\n💠 SSD NVME 256 GB\n💠 VGA INTEL UHD GRAPHIC\n💠 Display 14 inch FHD (1920 x 1080)\n💠 Warna Hitam\n💠 Bisa 180°\n💠 Bateray aman,  awet 2 jam lebih\n💠 Garansi Toko 1 Bulan\n💠 Kelengkapan Unit, Tas & Charger\n💠 Kondisi (Fisik standar, baterai awet, layar fhd bening, sound jernih, semua port normal)",
+      "images": [
+        "assets/uploads/laptop-p1795758985211-1-1795758988481-j4v0.jpg",
+        "assets/uploads/laptop-p1795758985211-2-1795758990627-ae1a.jpg",
+        "assets/uploads/laptop-p1795758985211-3-1795758993306-rxr4.jpg"
+      ],
+      "image": "assets/uploads/laptop-p1795758985211-1-1795758988481-j4v0.jpg"
+    },
     {
       "id": "p1795758786209",
       "brand": "ASUS",
