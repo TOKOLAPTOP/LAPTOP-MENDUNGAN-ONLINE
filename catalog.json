@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-11-27T05:43:04.166Z",
+  "updatedAt": "2026-11-27T05:49:20.292Z",
   "products": [
+    {
+      "id": "p1795758550114",
+      "brand": "DELL",
+      "name": "LATITUDE E7470",
+      "price": 3950000,
+      "discount": 0,
+      "category": "Desain",
+      "badge": "",
+      "specs": "SPESIFIKASI : \n💠 PROCESSOR Core I7-6600U (4 CPUs) ~ 2.8GHz\n💠 RAM DDR4 8 GB\n💠 SSD M.2 256 GB\n💠 VGA INTEL HD GRAPHIC\n💠 Display 14 inch HD (1366 x 768)\n💠 Warna Hitam\n💠 Keyboard Backlight\n💠 Bisa 180°\n💠 Bateray aman,  awet 2 jam lebih\n💠 Garansi Toko 1 Bulan\n💠 Kelengkapan Unit, Tas & Charger\n💠 Kondisi (Fisik standar, baterai awet, layar hd bening, sound jernih, semua port normal)",
+      "images": [
+        "assets/uploads/laptop-p1795758550114-1-1795758554201-ltrb.jpg",
+        "assets/uploads/laptop-p1795758550114-2-1795758556532-ic3y.jpg",
+        "assets/uploads/laptop-p1795758550114-3-1795758557989-teq3.jpg"
+      ],
+      "image": "assets/uploads/laptop-p1795758550114-1-1795758554201-ltrb.jpg"
+    },
     {
       "id": "p1795758174170",
       "brand": "ACER",
