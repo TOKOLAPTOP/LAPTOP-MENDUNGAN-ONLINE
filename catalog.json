@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-11-27T10:04:34.070Z",
+  "updatedAt": "2026-11-27T10:41:00.598Z",
   "products": [
+    {
+      "id": "p1795776051287",
+      "brand": "HP",
+      "name": "ELITEBOOK 820 G1",
+      "price": 2750000,
+      "discount": 0,
+      "category": "Kuliah",
+      "badge": "",
+      "specs": "SPESIFIKASI : \n💠 PROCESSOR Core I5-4300U (4 CPUs) ~ 1.90GHz\n💠 RAM 8 GB\n💠 SSD 128 GB + HDD 500 GB\n💠 VGA INTEL HD GRAPHIC\n💠 Display 12,5 inch HD (1366 x 768)\n💠 Warna Hitam\n💠 Bateray aman,  awet 2 jam lebih\n💠 Garansi Toko 1 Bulan\n💠 Kelengkapan Unit, Tas & Charger\n💠 Kondisi (Fisik standar, baterai awet, layar hd bening, sound jernih, semua port normal)",
+      "images": [
+        "assets/uploads/laptop-p1795776051287-1-1795776053926-0uwn.jpg",
+        "assets/uploads/laptop-p1795776051287-2-1795776056132-3qcq.jpg",
+        "assets/uploads/laptop-p1795776051287-3-1795776058592-nob6.jpg"
+      ],
+      "image": "assets/uploads/laptop-p1795776051287-1-1795776053926-0uwn.jpg"
+    },
     {
       "id": "p1795773864758",
       "brand": "DELL",
