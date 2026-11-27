@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-11-27T05:41:00.219Z",
+  "updatedAt": "2026-11-27T05:43:04.166Z",
   "products": [
+    {
+      "id": "p1795758174170",
+      "brand": "ACER",
+      "name": "ASPIRE A514-54",
+      "price": 4550000,
+      "discount": 0,
+      "category": "Kuliah",
+      "badge": "",
+      "specs": "SPESIFIKASI : \n💠 PROCESSOR Core I3-1115G4 (4 CPUs) ~ 3.0GHz\n💠 RAM DDR4 8 GB\n💠 SSD NVME 512 GB\n💠 VGA INTEL UHD GRAPHIC\n💠 Display 14 inch FHD (1920 x 1080)\n💠 Warna Silver\n💠 Keyboard Backlight\n💠 Bateray aman,  awet 3 jam lebih\n💠 Garansi Toko 1 Bulan\n💠 Kelengkapan Unit, Tas & Charger\n💠 Kondisi (Fisik standar, baterai awet, layar fhd bening, sound jernih, semua port normal)",
+      "images": [
+        "assets/uploads/laptop-p1795758174170-1-1795758177944-c55i.jpg",
+        "assets/uploads/laptop-p1795758174170-2-1795758180251-a1ka.jpg",
+        "assets/uploads/laptop-p1795758174170-3-1795758182625-16x9.jpg"
+      ],
+      "image": "assets/uploads/laptop-p1795758174170-1-1795758177944-c55i.jpg"
+    },
     {
       "id": "p1795757944496",
       "brand": "ASUS",
