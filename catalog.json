@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T02:38:55.499Z",
+  "updatedAt": "2026-11-27T02:48:30.416Z",
   "products": [
     {
       "id": "p1795694759739",
@@ -135,7 +135,9 @@
       "badge": "Harga spesial",
       "specs": "Intel Core i7 Gen 8 · RAM 16GB · SSD 256GB · Layar 14 inci FHD-Keyboard backlite",
       "images": [
-        "assets/uploads/laptop-p5-1-1795719570658-5qqh.jpg"
+        "assets/uploads/laptop-p5-1-1795719570658-5qqh.jpg",
+        "assets/uploads/laptop-p5-2-1795747705991-ymbt.jpg",
+        "assets/uploads/laptop-p5-3-1795747708482-jp1t.jpg"
       ],
       "image": "assets/uploads/laptop-p5-1-1795719570658-5qqh.jpg"
     },
