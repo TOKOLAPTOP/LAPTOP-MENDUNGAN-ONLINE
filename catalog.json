@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T06:40:29.949Z",
+  "updatedAt": "2026-11-27T06:40:44.423Z",
   "products": [
     {
       "id": "p1795761595991",
@@ -7,7 +7,7 @@
       "name": "NITRO LITE 16 71G",
       "price": 15550000,
       "discount": 0,
-      "category": "Kuliah",
+      "category": "Gaming",
       "badge": "",
       "specs": "- Processor Intel Core i5-13420H (12MB, up to 4.60Ghz)\n- Display 16″ WUXGA LED IPS 180Hz, 100% sRGB\n- RAM 8GB DDR5 4800MHz (upgradeable)\n- Storage 512GB SSD NVMe\n- Graphics NVIDIA GeForce RTX 4050 Laptop GPU, 6GB GDDR6\n- Keyboard Backlit White\n- Wireless Wi-Fi 6, 802.11ax 2×2, Bluetooth: 5.3\n- Ports 1x Thunderbolt 4, 2x USB 3.2, 1x 3.5mm headphone/speaker jack, 1x HDMI 2.1, 1x Ethernet (RJ-45)\n- Kamera 1080p FHD\n- OS Windows 11 Home x64",
       "images": [
